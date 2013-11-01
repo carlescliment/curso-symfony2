@@ -47,9 +47,9 @@ Ante el impulso inicial de los grandes frameworks monolíticos han surgido alter
 
 Gracias a los gestores de componentes, como Composer en PHP, es sencillo construirse aplicaciones a medida. Por ejemplo, una aplicación PHP podría tomar el componente de inyección de dependencias Pimple, el Event Dispatcher de Symfony 2 y cualquier otro componente que se proporcione aislado. Esta solución puede ser más apropiada para necesidades de negocio complejas o desarrolladores exigentes.
 
-Como ejemplo de esta segregación en paquetes, es interesante estudiar el caso de [The Aurora Project](http://auraphp.com/)
+Como ejemplo de esta segregación en paquetes, es interesante estudiar el caso de [The Aurora Project](http://auraphp.com/).
 
 
 Otros recursos sobre ventajas y desventajas de los frameworks:
-[Software Framework Advantages and Disadvantages](http://nagbhushan.wordpress.com/2010/10/03/framework-advantages-and-disadvantages/)
-[Pros and cons of using frameworks](http://www.1stwebdesigner.com/design/pros-cons-frameworks/)
+- [Software Framework Advantages and Disadvantages](http://nagbhushan.wordpress.com/2010/10/03/framework-advantages-and-disadvantages/)
+- [Pros and cons of using frameworks](http://www.1stwebdesigner.com/design/pros-cons-frameworks/)
