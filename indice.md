@@ -3,7 +3,7 @@
 1. Introducción
   1. [La evolución de PHP y los frameworks MVC](1-introduccion/la-evolucion-de-php-y-los-frameworks-mvc.md)
   1. [Ventajas e inconvenientes de los frameworks](1-introduccion/ventajas-e-inconvenientes-de-los-frameworks.md)
-  1. ¿Qué es Symfony? Arquitectura y componentes
+  1. [¿Qué es Symfony? Arquitectura y componentes](1-introduccion/que-es-symfony.md)
   1. La comunidad de Symfony 2
   1. Instalación y organización de directorios
   1. Gestión de paquetes con composer.
