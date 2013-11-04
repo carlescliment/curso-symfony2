@@ -1,4 +1,4 @@
-# ¿Qué es Symfony? Arquitectura y componentes
+# ¿Qué es Symfony?
 
 ## Qué es Symfony
 
@@ -30,5 +30,5 @@ Symfony abstrae la petición HTTP en un objeto Request que es procesado por el f
 
 Las ventajas de esta arquitectura son innumerables. Al abstraer la petición PHP en un objeto response, el framework ya no depende de las históricas variables PHP como `$_SESSION`, `$_SERVER`, `$_POST` o `$_GET`. Esto permite crear peticiones programáticamente y pasárselas al kernel sin necesidad de emplear peticiones *reales*. De esta manera es posible utilizar aplicaciones Symfony desde distintos entornos, como programas externos o tests automáticos.
 
-Por otra parte y gracias a su sistema de eventos, el framework Symfony permite a los desarrolladores intervenir en cualquier punto de la petición y para transformar los datos o realizar operaciones en paralelo.
+Por otra parte y gracias a su sistema de eventos, el framework Symfony permite a los desarrolladores intervenir en cualquier punto de la petición para transformar los datos o realizar operaciones en paralelo.
 
