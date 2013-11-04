@@ -32,3 +32,9 @@ Las ventajas de esta arquitectura son innumerables. Al abstraer la petición PHP
 
 Por otra parte y gracias a su sistema de eventos, el framework Symfony permite a los desarrolladores intervenir en cualquier punto de la petición para transformar los datos o realizar operaciones en paralelo.
 
+
+## Comunidad
+Ninguna plataforma open-source sería nada sin su comunidad. Las comunidades de Symfony 2 son lugares excelentes donde aprender de los demás, recibir y aportar nuevos puntos de vista y, en definitiva, pasar un buen rato.
+
+Además de los eventos internacionales, en España se celebra anualmente la conferencia [deSymfony](http://desymfony.com/) donde se citan los mejores desarrolladores del framework. También se han organizado otros grupos a nivel local, entre los que tenemos el grupo local de valencia, [SymfonyVLC](http://www.symfony-valencia.es/).
+
