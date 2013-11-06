@@ -5,6 +5,7 @@
   1. [Ventajas e inconvenientes de los frameworks](1-introduccion/ventajas-e-inconvenientes-de-los-frameworks.md)
   1. [¿Qué es Symfony?](1-introduccion/que-es-symfony.md)
   1. [Instalación y organización de directorios](1-introduccion/instalacion.md)
+  1. [Organización de directorios](1-introduccion/directorios.md)
   1. Gestión de paquetes con composer.
 
 2. Symfony a vista de pájaro

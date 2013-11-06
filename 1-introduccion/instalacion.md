@@ -50,7 +50,7 @@ $ sudo setfacl -dR -m u:$APACHEUSER:rwX -m u:`whoami`:rwX app/cache/ app/logs/
 ```
 
 
-## Ejemplo de configuración del servidor web
+## Ejemplo de configuración en Apache web server
 
 
 ```
@@ -83,3 +83,6 @@ $ sudo setfacl -dR -m u:$APACHEUSER:rwX -m u:`whoami`:rwX app/cache/ app/logs/
 Tras configurar el servidor web para que dirija correctamente las peticiones al sitio podremos acceder a él desde nuestro navegador en `http://tu-site-symfony.com/app_dev.php/`.
 
 ![Pantalla de bienvenida](bienvenida.png "Pantalla de bienvenida")
+
+Tómate tu tiempo curioseando tu instalación. ¡Enhorabuena!.
+
