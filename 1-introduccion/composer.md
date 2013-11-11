@@ -77,7 +77,7 @@ Las versiones pueden especificarse de distintas maneras:
 | Rango   | >=1.0
             >=1.0,!=1.4
             >=1.0,<2.0
-            >=1.0,<1.1 | >=1.2 | Especifica los rangos de la versión. Una coma es interpretada como un AND y una tubería como un OR.|
+            >=1.0,<1.1 \| >=1.2 | Especifica los rangos de la versión. Una coma es interpretada como un AND y una tubería como un OR.|
 | Comodín | 1.0.* | Equivale a >=1.0,<1.1 |
 | Tilde   | ~1.2  | Equivale a >=1.2,<2.0 |
 
