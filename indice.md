@@ -6,7 +6,7 @@
   1. [¿Qué es Symfony?](1-introduccion/que-es-symfony.md)
   1. [Instalación y organización de directorios](1-introduccion/instalacion.md)
   1. [Organización de directorios](1-introduccion/directorios.md)
-  1. Gestión de paquetes con composer.
+  1. [Gestión de dependencias con composer](1-introduccion/composer.md)
 
 2. Symfony a vista de pájaro
   2. Fundamentos HTTP. Ciclo de vida de una request.
