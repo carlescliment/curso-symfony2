@@ -7,8 +7,8 @@ Liberado en 2012, Composer ha supuesto una auténtica revolución en el mundo PH
 
 En Symfony, Composer fue introducido en su versión 2.1. En la versión anterior se utilizaba un gestor de dependencias propio.
 
-## Un composer.json básico
-Toda aplicación que utilice Composer debe contener en su raíz un archivo `composer.php` que defina sus atributos básicos. Por ejemplo:
+## Cómo definir un proyecto con Composer
+Toda aplicación que utilice Composer debe contener en su raíz un archivo `composer.json` que defina sus atributos básicos. Por ejemplo:
 
 ```composer.json
 {
@@ -55,8 +55,8 @@ De este ejemplo podemos extraer que:
 
 Veamos cómo funciona con mayor detenimiento.
 
-## Cómo definir dependencias
-Para definir una dependencia introduciremos el nombre del paquete o biblioteca en una clave *"require"*.
+## Cómo establecer dependencias
+Para establecer una dependencia introduciremos el nombre del paquete o biblioteca en una clave *"require"*.
 
 ```composer.json
 {
