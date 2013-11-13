@@ -146,7 +146,7 @@ $response->send();
 
 A lo largo del ciclo de vida de una petición, Symfony dispara distintos eventos que permiten a sus componentes reaccionar para modificar la respuesta o realizar acciones diversas. Cualquier bundle de nuestra aplicación puede asímismo adherirse a estos eventos.
 
-Antes de procesar la petición, en el método `handle()` de la clase HttpKernel.php, se dispara un evento `KernelEvents::REQUEST`:
+Antes de procesar la petición, en el método `handle()` de la clase `HttpKernel`, se dispara un evento `KernelEvents::REQUEST`:
 
 
 ```
