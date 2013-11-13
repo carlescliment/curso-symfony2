@@ -9,7 +9,7 @@
   1. [Gestión de dependencias con composer](1-introduccion/composer.md)
 
 2. Symfony a vista de pájaro
-  2. Fundamentos HTTP. Ciclo de vida de una request.
+  2. [Fundamentos HTTP](2-symfony-a-vista-de-pajaro/fundamentos-http.md)
   2. Routing
   2. El controlador
   2. La vista
