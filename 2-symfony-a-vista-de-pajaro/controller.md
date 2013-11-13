@@ -237,3 +237,30 @@ public function listByDatesAction(\DateTime $start, \DateTime $end)
 }
 ```
 
+### Template()
+
+Con Template() podemos escribir controladores de un modo más elegante utilizando convenios en la organización de plantillas. Los métodos a continuación serían equivalentes:
+
+
+```
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
+
+public function showAction($id)
+{
+    // ...
+    return $this->render('MyRecipesBundle:Recipe:show.html.twig', array(
+        'recipe' => $recipe,
+    ));
+}
+
+/**
+ * @Template()
+ */
+public function showAction($id)
+{
+    // ...
+    return array(
+        'recipe' => $recipe,
+    );
+}
+```
