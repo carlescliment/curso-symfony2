@@ -78,9 +78,18 @@ $ sudo setfacl -dR -m u:$APACHEUSER:rwX -m u:`whoami`:rwX app/cache/ app/logs/
 ```
 
 
+## Servidor embebido
+
+Si no deseamos perder tiempo con un servidor de desarrollo y disponemos de una versión de PHP 5.4 o superior podemos utilizar el [servidor embebido de PHP](http://www.php.net/manual/en/features.commandline.webserver.php). Este servidor está pensado para entornos de desarrollo y nunca debería usarse en entornos de producción.
+
+La consola de Symfony 2 proporciona un comando para arrancar nuestra aplicación Symfony; `app/console server:run`.
+
+![Builtin server](builtin-server.png "Builtin server")
+
+
 ## ¡Bienvenido!
 
-Tras configurar el servidor web para que dirija correctamente las peticiones al sitio podremos acceder a él desde nuestro navegador en `http://tu-site-symfony.com/app_dev.php/`.
+Tras configurar el servidor web para que dirija correctamente las peticiones al sitio podremos acceder a él desde nuestro navegador en `http://tu-site-symfony.com/app_dev.php/` o `localhost:8000` si hemos arrancado el servidor embebido.
 
 ![Pantalla de bienvenida](bienvenida.png "Pantalla de bienvenida")
 

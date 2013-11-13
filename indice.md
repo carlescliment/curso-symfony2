@@ -7,6 +7,7 @@
   1. [Instalación](1-introduccion/instalacion.md)
   1. [Organización de directorios](1-introduccion/directorios.md)
   1. [Gestión de dependencias con composer](1-introduccion/composer.md)
+  1. [El profiler y la consola](1-introduccion/profiler-y-consola.md)
 
 2. Symfony a vista de pájaro
   2. [Fundamentos HTTP](2-symfony-a-vista-de-pajaro/fundamentos-http.md)
@@ -15,7 +16,6 @@
   2. [Controlador](2-symfony-a-vista-de-pajaro/controller.md)
   2. [Vista](2-symfony-a-vista-de-pajaro/templating.md)
   2. [Modelo](2-symfony-a-vista-de-pajaro/model.md)
-  2. Herramientas útiles; el profiler y la consola.
 
 3. Gestión de la persistencia con Doctrine
   3. ¿Qué es Doctrine?
