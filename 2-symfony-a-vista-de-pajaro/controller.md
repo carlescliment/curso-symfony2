@@ -237,7 +237,7 @@ public function listByDatesAction(\DateTime $start, \DateTime $end)
 }
 ```
 
-### Template()
+### @Template
 
 Con Template() podemos escribir controladores de un modo más elegante utilizando convenios en la organización de plantillas. Los métodos a continuación serían equivalentes:
 
