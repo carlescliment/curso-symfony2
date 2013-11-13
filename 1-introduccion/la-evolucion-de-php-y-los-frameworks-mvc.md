@@ -8,7 +8,7 @@ Entre los motivos que explican la expansión de PHP podemos encontrar su suave c
 
 Pese a todos estos logros, PHP sigue estando muy mal considerado por amplios sectores de la comunidad de desarrolladores. ¿Por qué? Para responder a esta pregunta podemos partir de las decisiones en el diseño del lenguaje (un ejemplo, la cantidad y desorden de funciones para manejar arrays), pero también por su comunidad. Las mismas ventajas del lenguaje han atraído a multitud de programadores semi-profesionales o amateurs, y esto ha ayudado a generalizar las malas prácticas entre los proyectos PHP. Plataformas como Drupal o Wordpress [han extendido en gran medida esta imagen](https://api.drupal.org/api/drupal/modules%21user%21user.module/function/user_save/7).
 
-Podemos decir, sin embargo, que la comunidad PHP ya ha superado el punto de inflexión y empieza a remontar. La versión 5.0 y posteriores han intentado enmendar los errores del pasado con algunos cambios importantes, como el soporte para orientación a objetos y closures, entre otros.
+Podemos decir, sin embargo, que la comunidad PHP ya ha superado el punto de inflexión y empieza a remontar. Las versiones 5.0 y posteriores han intentado enmendar los errores del pasado con algunos cambios importantes, como el soporte para orientación a objetos y closures, entre otros.
 
 Uno de las mayores transformaciones ha sido la aparición de diversos frameworks de desarrollo que ha impulsado la estandarización y difusión de buenas prácticas entre la comunidad de desarrolladores. Entre esos frameworks, Symfony en su segunda versión es tal vez el más influyente en la actualidad.
 

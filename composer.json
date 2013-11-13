@@ -1,0 +1,29 @@
+{
+    "name": "carlescliment/curso-symfony2",
+    "description": "A REST microservice that converts html input into pdf files. Written in Silex.",
+    "version": "0.0.2",
+    "type": "project",
+    "keywords": ["printing", "pdf"],
+    "license": "GPL-2.0",
+    "authors": [
+        {
+            "name": "Carles Climent Granell",
+            "email": "carlescliment@gmail.com",
+            "homepage": "http://www.carlescliment.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.2",
+        # ...
+    },
+    "require-dev": {
+        "symfony/browser-kit": ">=2.3,<2.4-dev",
+        "phpunit/phpunit": "3.7.*"
+    },
+    "autoload": {
+        "psr-0": { "carlescliment\\Html2Pdf": "src" }
+    },
+    "minimum-stability" : "stable"
+}
+
