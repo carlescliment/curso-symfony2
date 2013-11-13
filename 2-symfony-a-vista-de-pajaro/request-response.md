@@ -88,23 +88,10 @@ $response = $kernel->handle($request);
 ```Response.php
 class Response
 {
-    public $headers;
-    protected $content;
-    protected $version;
-    protected $statusCode;
-    protected $statusText;
-    protected $charset;
-
 
     public function __construct($content = '', $status = 200, $headers = array())
     {
-        $this->headers = new ResponseHeaderBag($headers);
-        $this->setContent($content);
-        $this->setStatusCode($status);
-        $this->setProtocolVersion('1.0');
-        if (!$this->headers->has('Date')) {
-            $this->setDate(new \DateTime(null, new \DateTimeZone('UTC')));
-        }
+        // ...
     }
 
     public static function create($content = '', $status = 200, $headers = array())
