@@ -162,7 +162,7 @@ $this->dispatcher->dispatch(KernelEvents::CONTROLLER, $event);
 $controller = $event->getController();
 ```
 
-Aunque es lo más común, en algunas ocasiones, el controlador no devuelve una instancia de `Response`. Por ejemplo, la etiqueta [Template()](http://symfony.com/doc/current/bundles/SensioFrameworkExtraBundle/annotations/view.html) permite aligerar las acciones de un controlador devolviendo un array y siguiendo cierto convenio. En estos casos, `AppKernel` dispara un evento `KernelEvents::VIEW`, y serán otros componentes los que se encarguen de construir el objeto `Response`.
+En algunas ocasiones el controlador no devuelve una instancia de `Response`. Por ejemplo, la etiqueta [Template()](http://symfony.com/doc/current/bundles/SensioFrameworkExtraBundle/annotations/view.html) permite aligerar las acciones de un controlador devolviendo un array y siguiendo cierto convenio. En estos casos, `AppKernel` dispara un evento `KernelEvents::VIEW`, y serán otros componentes los que se encarguen de construir el objeto `Response`.
 
 
 Cualquier excepción que ocurra durante el procesamiento de una petición tendrá como consecuencia que se dispare un evento `KernelEvents::EXCEPTION`. Symfony utiliza este evento para enmascarar la excepción en una vista más amigable y ofrecer herramientas de debugging.
