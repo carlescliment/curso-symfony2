@@ -141,6 +141,14 @@ $response = $kernel->handle($request);
 $response->send();
 ```
 
+## Tipos especiales de respuesta
+
+Un caso específico de respuesta es la clase [JsonResponse](http://api.symfony.com/2.2/Symfony/Component/HttpFoundation/JsonResponse.html) para respuestas cuyo contenido se devuelve en [JSON](http://en.wikipedia.org/wiki/JSON).
+
+Otro ejemplo lo tenemos en la clase [RedirectResponse](http://api.symfony.com/master/Symfony/Component/HttpFoundation/RedirectResponse.html) que indica a los clientes la dirección a la que deben dirigirse.
+
+La clase [StreamedResponse](http://api.symfony.com/master/Symfony/Component/HttpFoundation/StreamedResponse.html) ofrece respuestas en streaming y es utilizada fundamentalmente en medios pesados como vídeo o grandes volúmenes de datos.
+
 
 ## Eventos en el ciclo de una petición
 

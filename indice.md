@@ -12,7 +12,7 @@
   2. [Fundamentos HTTP](2-symfony-a-vista-de-pajaro/fundamentos-http.md)
   2. [Request y Response en Symfony 2](2-symfony-a-vista-de-pajaro/request-response.md)
   2. [Routing](2-symfony-a-vista-de-pajaro/routing.md)
-  2. El controlador
+  2. [Controlador](2-symfony-a-vista-de-pajaro/controller.md)
   2. La vista
   2. El modelo.
   2. Herramientas útiles; el profiler y la consola.

@@ -1,5 +1,7 @@
 # Routing
 
+Para una información más completa y actualizada, consultad la [documentación oficial](http://symfony.com/doc/current/book/routing.html).
+
 El sistema de enrutado relaciona los recursos indicados en las peticiones con los controladores encargados de gestionarlos.
 
 Symfony carga todas las rutas del archivo de enrutado de la aplicación, normalmente en `app/config/routing.yml`. En este archivo podemos incluir referencias a otras fuentes junto con otras opciones de configuración.
@@ -12,7 +14,6 @@ my_recipes:
 
 Los archivos de configuración pueden escribirse en `yml`, `xml` o `php`. En este material didáctico veremos todos los ejemplos en yml.
 
-Para una información más completa y actualizada, consultad la [documentación oficial](http://symfony.com/doc/current/book/routing.html).
 
 ## Crear una ruta
 
