@@ -116,6 +116,7 @@ Connection: close
 A continuación se describen algunos códigos de respuesta y su significado. Para una información más completa, consulta la [documentación oficial](http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html).
 
 | Código | Nombre | Descripción |
+| -------|--------|-------------|
 | 100    | Continue | El cliente debe continuar enviando más informacion de la petición. |
 | 200    | OK | La petición ha tenido éxito |
 | 201    | Created | Un nuevo recurso ha sido creado |
