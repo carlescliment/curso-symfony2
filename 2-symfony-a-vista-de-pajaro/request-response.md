@@ -4,62 +4,7 @@ En el anteriores capítulos hemos visto algunos fundamentos de HTTP y definido S
 
 ## La clase Request
 
-```Request.php
-
-class Request
-{
-    public function __construct(array $query = array(), array $request = array(), array $attributes = array(), array $cookies = array(), array $files = array(), array $server = array(), $content = null)
-    {
-        $this->initialize($query, $request, $attributes, $cookies, $files, $server, $content);
-    }
-
-    public function initialize(array $query = array(), array $request = array(), array $attributes = array(), array $cookies = array(), array $files = array(), array $server = array(), $content = null)
-    {
-        $this->request = new ParameterBag($request);
-        $this->query = new ParameterBag($query);
-        // ...
-    }
-
-    public static function createFromGlobals()
-    {
-        $request = new static($_GET, $_POST, array(), $_COOKIE, $_FILES, $_SERVER);
-        // ...
-        return $request;
-    }
-
-    public static function create($uri, $method = 'GET', $parameters = array(), $cookies = array(), $files = array(), $server = array(), $content = null)
-    {
-        // ...
-        return new static($query, $request, array(), $cookies, $files, $server, $content);
-    }
-
-    public function __toString()
-    {
-        return
-            sprintf('%s %s %s', $this->getMethod(), $this->getRequestUri(), $this->server->get('SERVER_PROTOCOL'))."\r\n".
-            $this->headers."\r\n".
-            $this->getContent();
-    }
-
-    public function get($key, $default = null, $deep = false)
-    {
-        // ...
-    }
-
-    public function getSession()
-    {
-        return $this->session;
-    }
-
-    public function getContent($asResource = false)
-    {
-        // ...
-        return $this->content;
-    }
-
-    // ...
-}
-```
+![Request](uml-Request.png "Request")
 
 La clase Request contiene todo lo necesario para realizar una petición web, incluídas las cookies que permitirán gestionar las sesiones, archivos transferidos, etcétera. Podríamos crear una request utilizando las viariables globales PHP:
 
@@ -85,53 +30,7 @@ $response = $kernel->handle($request);
 
 ## La clase Response
 
-```Response.php
-class Response
-{
-
-    public function __construct($content = '', $status = 200, $headers = array())
-    {
-        // ...
-    }
-
-    public static function create($content = '', $status = 200, $headers = array())
-    {
-        return new static($content, $status, $headers);
-    }
-
-
-    public function __toString()
-    {
-        return
-            sprintf('HTTP/%s %s %s', $this->version, $this->statusCode, $this->statusText)."\r\n".
-            $this->headers."\r\n".
-            $this->getContent();
-    }
-
-    public function sendHeaders()
-    {
-        header(sprintf('HTTP/%s %s %s', $this->version, $this->statusCode, $this->statusText));
-        // ...
-        return $this;
-    }
-
-    public function sendContent()
-    {
-        echo $this->content;
-        return $this;
-    }
-
-    public function send()
-    {
-        $this->sendHeaders();
-        $this->sendContent();
-        // ...
-        return $this;
-    }
-
-    // ...
-}
-```
+![Response](uml-Response.png "Response")
 
 Response encapsula una respuesta HTTP. Toda petición a `AppKernel` debe devolver un objeto response. Como se observa en `web/app.php`, una vez recuperado el objeto Response se invoca al método `send()` encargado de mostrar la respuesta:
 
