@@ -9,7 +9,7 @@
   1. [Gestión de dependencias con composer](1-introduccion/composer.md)
   1. [El profiler y la consola](1-introduccion/profiler-y-consola.md)
 
-2. Symfony a vista de pájaro
+2. El Framework Symfony 2
   2. [Fundamentos HTTP](2-symfony-a-vista-de-pajaro/fundamentos-http.md)
   2. [Request y Response en Symfony 2](2-symfony-a-vista-de-pajaro/request-response.md)
   2. [Routing](2-symfony-a-vista-de-pajaro/routing.md)
