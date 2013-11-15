@@ -4,7 +4,7 @@
 
 HTTP es un *protocolo de aplicación* usado en *la web* (www) para comunicaciones entre cliente y servidor. El servidor puede ser un ordenador que aloja una aplicación web, y el cliente web más común que conocemos es el navegador o *web browser". Pero con el tiempo han salido muchos otros modelos de cliente servidor. De hecho, en la actualidad es muy común que un servidor ejerza de cliente de otros servidores.
 
-![La Pila OSI](http://upload.wikimedia.org/wikipedia/commons/7/7d/Pila-osi-es.svg "La Pila OSI")
+![La Pila OSI](http://www.washington.edu/lst/help/computing_fundamentals/networking/img/osi_model.jpg "La Pila OSI")
 
 HTTP define cómo debe construirse una *petición* y cómo debe devolverse una *respuesta*.
 
