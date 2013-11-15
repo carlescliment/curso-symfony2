@@ -35,32 +35,27 @@
   4. Generación de assets
   4. Extensiones
 
-5. Routing avanzado
-  5. Requirements
-  5. Matching
-  5. Añadir prefijos
+5. Formularios y validaciones
+  5. El componente de formularios de Symfony 2
+  5. Validaciones
+  5. Data transformers
+  5. Form events
 
-6. Formularios y validaciones
-  6. El componente de formularios de Symfony 2
-  6. Validaciones
-  6. Data transformers
-  6. Form events
+6. Inyección de dependencias
+  6. Qué es y para qué sirve la inyección de dependencias
+  6. El componente de inyección de dependencias de Symfony 2
+  6. Trabajando con distintos entornos
 
-7. Inyección de dependencias
-  7. Qué es y para qué sirve la inyección de dependencias
-  7. El componente de inyección de dependencias de Symfony 2
-  7. Trabajando con distintos entornos
+7. Eventos
+  7. El Event Dispatcher
+  7. Organizando tu código con eventos (slim controller, slim model)
 
-8. Eventos
-  8. El Event Dispatcher
-  8. Organizando tu código con eventos (slim controller, slim model)
+8. Testing con PHPUnit
+  8. Testing funcional
+  8. Testing unitario
+  8. Mocks, Stubs y Fake Objects
+  8. Test Driven Development con Symfony 2
 
-9. Testing con PHPUnit
-  9. Testing funcional
-  9. Testing unitario
-  9. Mocks, Stubs y Fake Objects
-  9. Test Driven Development con Symfony 2
+9. Internacionalización
 
-10. Internacionalización
-
-11. Apéndice: Cómo crear tu propio bundle.
+10. Apéndice: Cómo publicar tu propio bundle.
