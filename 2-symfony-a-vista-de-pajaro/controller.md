@@ -197,7 +197,7 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\ParamConverter;
 
 /**
  * @Route('/{id}', name="recipe_show", requirements={"id" = "\d+"})
- * @ParamConverter("id", class="My\ReceiptBundle\MaskedId")
+ * @ParamConverter("id", class="My\ReceiptBundle\MaskedResource")
  */
 public function showAction(MaskedResource $id)
 {
