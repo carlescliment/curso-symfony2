@@ -56,7 +56,7 @@ De este ejemplo podemos extraer que:
 Veamos cómo funciona con mayor detenimiento.
 
 ## Cómo establecer dependencias
-Para establecer una dependencia introduciremos el nombre del paquete o biblioteca en una clave *"require"*.
+Para establecer una dependencia introduciremos el nombre del paquete o biblioteca en una clave `require`.
 
 ```composer.json
 {
@@ -67,7 +67,7 @@ Para establecer una dependencia introduciremos el nombre del paquete o bibliotec
 }
 ```
 
-En la parte izquierda especificaremos el *nombre del paquete*, mientras que en la derecha especificamos la versión.
+En la parte izquierda especificaremos el nombre del paquete, mientras que en la derecha especificamos la versión.
 
 Las versiones pueden especificarse de distintas maneras:
 
@@ -81,7 +81,7 @@ Las versiones pueden especificarse de distintas maneras:
 | Comodín | `1.0.*` | Equivale a >=1.0,<1.1 |
 | Tilde   | `~1.2`  | Equivale a >=1.2,<2.0 |
 
-Por defecto, solo se tendrán en cuenta las versiones estables de cada paquete. Este comportamiento puede ser modificado mediante la clave "minimum-stability". Las opciones son `dev`, `apha`, `beta`, `RC` y `stable`.
+Por defecto, solo se tendrán en cuenta las versiones estables de cada paquete. Este comportamiento puede ser modificado mediante la clave `minimum-stability`. Las opciones son `dev`, `apha`, `beta`, `RC` y `stable`.
 
 ```composer.json
 {
@@ -92,7 +92,7 @@ Por defecto, solo se tendrán en cuenta las versiones estables de cada paquete. 
 Una vez especificadas las dependencias, basta con instalarlas ejecutando `php composer.phar update`. Tras ejecutar el comando se iniciará la descarga de las dependencias, se generará un autoloader y se creará un archivo `composer.lock`.
 
 ## Autoloading
-Composer crea un archivo `vendor/autoload.php` que contiene la carga automática de clases y espacios de nombres de aquellos paquetes que lo necesiten. Esto te permitirá incluir fácilmente estos paquetes en tu proyecto añadiendo simplemente un *require* en tu aplicación:
+Composer crea un archivo `vendor/autoload.php` que contiene la carga automática de clases y espacios de nombres de aquellos paquetes que lo necesiten. Esto te permitirá incluir fácilmente estos paquetes en tu proyecto añadiendo simplemente un `require` en tu aplicación:
 
 `require 'vendor/autoload.php';`
 
@@ -115,6 +115,6 @@ En el caso de que Composer no encuentre un `composer.lock`, generará uno nuevo 
 ## Packagist
 Si queremos publicar un proyecto para que otros puedan descargarlo via Composer, debemos dotarlo de un archivo `composer.json` válido y darlo de alta en la base de datos de la web [Packagist](https://packagist.org/). La mayoría de los gestores de versiones del mercado permiten disparar de manera automática acciones (hooks) que informarán a Packagist de nuevas versiones.
 
-Es posible añadir otras fuentes, además de Packagist. [Satis](https://github.com/composer/satis), por ejemplo, es una herramienta que permite crearnos un *Packagist privado". Resulta muy útil cuando tenemos dependencias de código que no deseamos publicar. Para más información sobre cómo gestionar repositorios privados con composer ver el siguiente enlace:
+Es posible añadir otras fuentes, además de Packagist. [Satis](https://github.com/composer/satis), por ejemplo, es una herramienta que permite crearnos un _Packagist privado_. Resulta muy útil cuando tenemos dependencias de código que no deseamos publicar. Para más información sobre cómo gestionar repositorios privados con composer ver el siguiente enlace:
 
 [Handling private packages with Satis](https://github.com/composer/composer/blob/master/doc/articles/handling-private-packages-with-satis.md)

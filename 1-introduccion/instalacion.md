@@ -1,6 +1,6 @@
 # Instalación
 
-Aunque Symfony puede ser descargado y descomprimido directamente allí donde lo queramos dejar, en este curso vamos a utilizar desde el principio el gestor de dependencias *composer*. Esta guía describe el proceso de instalación en una máquina basada en Debian. Para otros sistemas operativos, consultad la [guía de instalación](http://symfony.com/doc/current/book/installation.html) en la web del framework.
+Aunque Symfony puede ser descargado y descomprimido directamente allí donde lo queramos dejar, en este curso vamos a utilizar desde el principio el gestor de dependencias **composer**. Esta guía describe el proceso de instalación en una máquina basada en Debian. Para otros sistemas operativos, consultad la [guía de instalación](http://symfony.com/doc/current/book/installation.html) en la web del framework.
 
 ## Cómo descargar composer
 
@@ -26,17 +26,17 @@ Tras descargar los componentes necesarios, el terminal nos pedirá interactivame
 ![Configuración de Symfony](symfony_install.png "Configuración de Symfony")
 
 
-- *database_driver*: Configura el motor de base de datos a utilizar para la instalación. Algunas opciones son `pdo_mysql` o `pdo_sqlite`. Recuerda que necesitarás tener instaladas en tu equipo las extensiones correspondientes.
-- *database_host*: La máquina donde se aloja la base de datos. Por defecto la máquina local (127.0.0.1).
-- *database_port*: El puerto mediante el cual se accede a la base de datos. Dejándolo a `null` se utilizará el puerto por defecto del motor elegido.
-- *database_name*: Nombre de la base de datos de la instalación.
-- *database_user*: Usuario con el que se accederá a la base de datos.
-- *database_password*: Contraseña del usuario de la base de datos.
-- *mailer_transport*: Protocolo de transporte a utilizar en el envío de emails. Algunas opciones son `sendmail` o `smtp`.
-- *mailer_user*: Si aplica, usuario a utilizar para el envío de emails.
-- *mailer_password*: Si aplica, contraseña del usuario para el envío de emails.
-- *local*: Localización idiomática del sitio. Afecta, por ejemplo, al modo en el que se formatean las fechas y a los ficheros de traducción cargados.
-- *secret*: Esta clave es utilizada por Symfony en sus mecanismos de encriptación. ¡No te olvides de cambiarla!.
+- **database_driver**: Configura el motor de base de datos a utilizar para la instalación. Algunas opciones son `pdo_mysql` o `pdo_sqlite`. Recuerda que necesitarás tener instaladas en tu equipo las extensiones correspondientes.
+- **database_host**: La máquina donde se aloja la base de datos. Por defecto la máquina local (127.0.0.1).
+- **database_port**: El puerto mediante el cual se accede a la base de datos. Dejándolo a `null` se utilizará el puerto por defecto del motor elegido.
+- **database_name**: Nombre de la base de datos de la instalación.
+- **database_user**: Usuario con el que se accederá a la base de datos.
+- **database_password**: Contraseña del usuario de la base de datos.
+- **mailer_transport**: Protocolo de transporte a utilizar en el envío de emails. Algunas opciones son `sendmail` o `smtp`.
+- **mailer_user**: Si aplica, usuario a utilizar para el envío de emails.
+- **mailer_password**: Si aplica, contraseña del usuario para el envío de emails.
+- **local**: Localización idiomática del sitio. Afecta, por ejemplo, al modo en el que se formatean las fechas y a los ficheros de traducción cargados.
+- **secret**: Esta clave es utilizada por Symfony en sus mecanismos de encriptación. ¡No te olvides de cambiarla!.
 
 
 

@@ -1,6 +1,6 @@
 # La evolución de PHP y los frameworks MVC
 
-PHP nace en 1995 de la mano de Rasmus Lerdorf, en una época donde emergen otros lenguajes de tipado dinámico como Python o Ruby. Fue concebido para el *desarrollo de webs dinámicas* y a día de hoy es el lenguaje más extendido entre los servidores web, según [w3techs.com](http://w3techs.com).
+PHP nace en 1995 de la mano de Rasmus Lerdorf, en una época donde emergen otros lenguajes de tipado dinámico como Python o Ruby. Fue concebido para el **desarrollo de webs dinámicas** y a día de hoy es el lenguaje más extendido entre los servidores web, según [w3techs.com](http://w3techs.com).
 
 ![Lenguajes más usados por servidores web](lenguajes-mas-usados.png "Lenguajes más usados por servidores web")
 

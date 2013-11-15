@@ -85,7 +85,7 @@ recipes_show:
 
 ¿Cómo debería reaccionar Symfony ante la petición `/recipes/5`? ¿Debería responder con la página 5 del listado de recetas? ¿O, al contrario, devería responder con la receta de nombre "5"?
 
-En este caso Symfony respondería con la primera opción, ya que *las rutas que se definen primero tienen prioridad*. Pero la segunda ruta se vería por tanto enmascarada por la primera.
+En este caso Symfony respondería con la primera opción, ya que **las rutas que se definen primero tienen prioridad**. Pero la segunda ruta se vería por tanto enmascarada por la primera.
 
 En Symfony es posible asegurar que las rutas cumplen algunos requisitos mediante la clave requirements. El conflicto anterior podría resolverse añadiéndose la siguiente validación:
 

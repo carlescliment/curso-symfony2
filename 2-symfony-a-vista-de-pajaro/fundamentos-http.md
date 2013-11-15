@@ -2,11 +2,11 @@
 
 ## Qué es HTTP
 
-HTTP es un *protocolo de aplicación* usado en *la web* (www) para comunicaciones entre cliente y servidor. El servidor puede ser un ordenador que aloja una aplicación web, y el cliente web más común que conocemos es el navegador o *web browser". Pero con el tiempo han salido muchos otros modelos de cliente servidor. De hecho, en la actualidad es muy común que un servidor ejerza de cliente de otros servidores.
+HTTP es un **protocolo de aplicación** usado en **la web** (www) para comunicaciones entre cliente y servidor. El servidor puede ser un ordenador que aloja una aplicación web, y el cliente web más común que conocemos es el navegador o **web browser". Pero con el tiempo han salido muchos otros modelos de cliente servidor. De hecho, en la actualidad es muy común que un servidor ejerza de cliente de otros servidores.
 
 ![La Pila OSI](http://www.washington.edu/lst/help/computing_fundamentals/networking/img/osi_model.jpg "La Pila OSI")
 
-HTTP define cómo debe construirse una *petición* y cómo debe devolverse una *respuesta*.
+HTTP define cómo debe construirse una **petición** y cómo debe devolverse una **respuesta**.
 
 ## La petición
 
@@ -62,15 +62,15 @@ Son métodos que podemos repetir varias veces obteniendo el mismo resultado en e
 
 Los recursos se identifican por URNs (Uniform Resource Names). Los recursos deben estar identificados de manera unívoca, esto es, sólo debería haber un URN por cada recurso. Ejemplos de recursos válidos son:
 
- * `/`
- * `/clientes/23`
- * `/clientes/juan-martinez`
+ - `/`
+ - `/clientes/23`
+ - `/clientes/juan-martinez`
 
 
 Los query parameters enviados no definen recursos. Por ejemplo los siguientes recursos serían equivalentes y no se ajustarían al estándar HTTP. Ambos apuntarían a la colección "clientes":
 
- * `/clientes?nombre=Juan`
- * `/clientes?nombre=Antonio`
+ - `/clientes?nombre=Juan`
+ - `/clientes?nombre=Antonio`
 
 
 ### Cabeceras opcionales
@@ -89,9 +89,9 @@ El protocolo HTTP define [una serie de cabeceras](http://www.w3.org/Protocols/HT
 
 Una respuesta HTTP consta de:
 
- * Una linea de status con la versión, el código de respuesta y el nombre del código.
- * Cabeceras opcionales
- * El cuerpo de la respuesta
+ - Una linea de status con la versión, el código de respuesta y el nombre del código.
+ - Cabeceras opcionales
+ - El cuerpo de la respuesta
 
 ```http-response
 HTTP/1.1 200 OK

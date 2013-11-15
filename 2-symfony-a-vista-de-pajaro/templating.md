@@ -3,7 +3,7 @@
 En capítulos anteriores hemos visto que el enrutado se encarga de distribuir las peticiones entre los distintos controladores. Los controladores, a su vez, extraen la información necesaria de la petición y construyen con ellos una respuesta. Aunque sería posible devolver HTML directamente desde el controlador, es recomendable delegar esta función al motor de plantillas.
 
 
-El motor por defecto en Symfony 2 es *twig*.
+El motor por defecto en Symfony 2 es **twig**.
 
 
 ```base.html.twig

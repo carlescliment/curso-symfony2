@@ -1,6 +1,6 @@
 # Request y Response
 
-En el anteriores capítulos hemos visto algunos fundamentos de HTTP y definido Symfony como un *framework HTTP*. Symfony construye una capa de abstracción sobre HTTP, que se sustenta en dos clases importantes del componente HTTPFoundation: Request y Response.
+En el anteriores capítulos hemos visto algunos fundamentos de HTTP y definido Symfony como un **framework HTTP**. Symfony construye una capa de abstracción sobre HTTP, que se sustenta en dos clases importantes del componente HTTPFoundation: Request y Response.
 
 ## La clase Request
 
