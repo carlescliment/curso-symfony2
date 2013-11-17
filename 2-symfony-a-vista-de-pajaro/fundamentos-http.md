@@ -2,7 +2,7 @@
 
 ## Qué es HTTP
 
-HTTP es un **protocolo de aplicación** usado en **la web** (www) para comunicaciones entre cliente y servidor. El servidor puede ser un ordenador que aloja una aplicación web, y el cliente web más común que conocemos es el navegador o **web browser". Pero con el tiempo han salido muchos otros modelos de cliente servidor. De hecho, en la actualidad es muy común que un servidor ejerza de cliente de otros servidores.
+HTTP es un **protocolo de aplicación** usado en **la web** (www) para comunicaciones entre cliente y servidor. El servidor puede ser un ordenador que aloja una aplicación web, y el cliente web más común que conocemos es el navegador o **web browser**. Pero con el tiempo han salido muchos otros modelos de cliente servidor. De hecho, en la actualidad es muy común que un servidor ejerza de cliente de otros servidores.
 
 ![La Pila OSI](http://www.washington.edu/lst/help/computing_fundamentals/networking/img/osi_model.jpg "La Pila OSI")
 
@@ -33,7 +33,7 @@ La versión HTTP/1.1 define [ocho posibles métodos](http://www.w3.org/Protocols
 
 #### Métodos seguros
 
-Son métodos que no desencadenan acciones en el servidor, aparte de recoger información. Entre ellos tenemos GET y HEAD. Aunque estos métodos estén definidos como seguros, depende de nosotros, los implementadores, que lo sean efectivamente. Es decir, debemos procurar que las llamadas GET y HEAD desencadenen acciones que alteren el estado del sistema.
+Son métodos que no desencadenan acciones en el servidor, aparte de recoger información. Entre ellos tenemos GET y HEAD. Aunque estos métodos estén definidos como seguros, depende de nosotros, los implementadores, que lo sean efectivamente. Es decir, debemos procurar que las llamadas GET y HEAD desencadenen acciones que no alteren el estado del sistema.
 
 #### Métodos idempotentes
 
