@@ -33,7 +33,7 @@ La versión HTTP/1.1 define [ocho posibles métodos](http://www.w3.org/Protocols
 
 #### Métodos seguros
 
-Son métodos que no desencadenan acciones en el servidor, aparte de recoger información. Entre ellos tenemos GET y HEAD. Aunque estos métodos estén definidos como seguros, depende de nosotros, los implementadores, que lo sean efectivamente. Es decir, debemos procurar que las llamadas GET y HEAD desencadenen acciones que no alteren el estado del sistema.
+Son métodos que no desencadenan acciones en el servidor, aparte de recoger información. Entre ellos tenemos GET y HEAD. Aunque estos métodos estén definidos como seguros, depende de nosotros, los implementadores, que lo sean efectivamente. Es decir, debemos procurar que las llamadas GET y HEAD no desencadenen acciones que alteren el estado del sistema.
 
 #### Métodos idempotentes
 
