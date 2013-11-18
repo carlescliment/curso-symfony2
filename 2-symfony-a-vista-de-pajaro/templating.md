@@ -39,6 +39,6 @@ public function showAction($id)
 }
 ```
 
-Symfony buscará la plantilla show.html.twig indicada en la ruta `src\My\RecipesBundle\Resources\views\Recipe\show.html.twig`.
+Symfony buscará la plantilla show.html.twig indicada en la ruta `src/My/RecipesBundle/Resources/views/Recipe/show.html.twig`.
 
 Baste con esta pequeña introducción a las vistas por ahora, más adelante dedicaremos un tema completo a Twig y el renderizado de plantillas.
