@@ -47,7 +47,7 @@ Además de los parámetros proporcionados por el enrutador, en Symfony podemos i
     }
 ```
 
-Gracias al uso de la [reflexión](http://en.wikipedia.org/wiki/Reflection_(computer_programming)) no importa el orden en el que especifiquemos estos parámetros.
+Gracias al uso de la [reflexión](http://en.wikipedia.org/wiki/Reflection_(computer_programming%29) no importa el orden en el que especifiquemos estos parámetros.
 
 ## El controlador base
 Symfony proporciona una clase base `Controller` que podemos extender en nuestros controladores y que proporciona algunos métodos útiles.:
@@ -164,7 +164,7 @@ El Bundle SensioFrameworkExtraBundle proporciona algunas funcionalidades interes
 
 ### @Route y @Method
 
-Utiliza la anotación `@Route` para indicar la ruta de la que el controlador es responsable sin necesidad de ficheros de enrutamiento específicos. `@Method 
+Utiliza la anotación `@Route` para indicar la ruta de la que el controlador es responsable sin necesidad de ficheros de enrutamiento específicos. `@Method` permite definir el método (o métodos) HTTP permitidos para la ruta.
 
 
 ```

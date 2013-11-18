@@ -192,7 +192,7 @@ $uri = $router->generate('recipes_show', array('recipe_id' => 55), true);
 
 // Query strings: /recipes/55?param1=foo
 $router = $this->get('router');
-$uri = $router->generate('recipes_show', array('recipe_id' => 55, 'param1' => 'foo'), true);
+$uri = $router->generate('recipes_show', array('recipe_id' => 55, 'param1' => 'foo'));
 
 ```
 
