@@ -26,7 +26,7 @@ def full_path(theme, file):
 
 def execute_conversion(doctype, theme, files):
     joined = ' '.join(files)
-    command = "pandoc -o ./compiled/%s/%s.docx %s -t %s"%(doctype, theme, joined, doctype);
+    command = "pandoc -o ./compiled/%s/%s.%s %s -t %s"%(doctype, theme, doctype, joined, doctype);
     os.system(command)
 
 
