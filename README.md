@@ -18,7 +18,7 @@
   2. [Modelo](2-symfony-a-vista-de-pajaro/model.md)
 
 3. Gestión de la persistencia con Doctrine
-  3. ¿Qué es Doctrine?
+  3. [¿Qué es Doctrine?](/3-doctrine/doctrine.md)
   3. Definición de entidades
   3. El entity manager
   3. Definición de relaciones
