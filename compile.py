@@ -18,10 +18,17 @@ themes = { "1-introduccion" :
          }
 
 def convert(theme, files):
-    command = "pandoc -o ./compiled/docx/" + theme + ".docx ";
-    full_path_files = ' '.join([theme + "/" + file + ".md" for file in files])
-    command += full_path_files + " -t docx"
+    full_path_files = [full_path(theme, file) for file in files]
+    execute_conversion("docx", theme, full_path_files);
+
+def full_path(theme, file):
+    return theme + "/" + file + ".md"
+
+def execute_conversion(doctype, theme, files):
+    joined = ' '.join(files)
+    command = "pandoc -o ./compiled/%s/%s.docx %s -t %s"%(doctype, theme, joined, doctype);
     os.system(command)
+
 
 for theme, files in themes.items() :
     convert(theme, files)
