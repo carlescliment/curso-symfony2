@@ -19,7 +19,8 @@
 
 3. Gestión de la persistencia con Doctrine
   3. [¿Qué es Doctrine?](/3-doctrine/doctrine.md)
-  3. Definición de entidades
+  3. [Configuración](/3-doctrine/configuracion.md)
+  3. [Definición y manipulación de entidades](/3-doctrine/entidades.md)
   3. El entity manager
   3. Definición de relaciones
   3. Lazy y greedy
