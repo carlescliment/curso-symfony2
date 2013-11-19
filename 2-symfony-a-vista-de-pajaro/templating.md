@@ -24,7 +24,7 @@ El motor por defecto en Symfony 2 es **twig**.
 </html>
 ```
 
-En twig, las llaves dobles `{{ ... }}` se utilizan para mostrar una variable, mientras que la combinación de llave y paréntesis `{% ... %}` simboliza el uso de una expresión.
+En twig, las llaves dobles `{{ ... }}` se utilizan para mostrar una variable, mientras que la combinación de llave y símbolo de porcentaje `{% ... %}` simboliza el uso de una expresión.
 
 
 Tal y como vimos en el capítulo de controladores, para renderizar una plantilla desde un controlador utilizamos el método `render()`.
