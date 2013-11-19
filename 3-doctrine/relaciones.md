@@ -57,7 +57,6 @@ Para crear una relación muchos a uno desde `Recipe` a `Author` añadiremos, en 
 
 ```
 // src/My/RecipesBundle/Entity/Recipe.php
-use Doctrine\Common\Collections\ArrayCollection;
 
 class Recipe
 {
@@ -78,8 +77,8 @@ My\RecipesBundle\Entity\Recipe:
         author:
             targetEntity: Author
             joinColumn:
-                author_id:
-                    referencedColumnName: id
+                name: author_id
+                referencedColumnName: id
     # ...
 ```
 
@@ -179,9 +178,87 @@ ALTER TABLE recipe_ingredients ADD CONSTRAINT FK_9F925F2B933FE08C FOREIGN KEY (i
 
 ## Manipular relaciones
 
-## Relaciones unidireccionales y bidireccionales
+Ya tenemos una entidad `Recipe` bastante compleja, por lo que vamos a facilitar su configuración con un constructor más amplio. Además, añadiremos un método que permita añadir ingredientes.
+
+```
+class Recipe
+{
+    // ...
+
+    public function __construct(Author $author, $name, $description, $difficulty)
+    {
+        $this->author = $author;
+        $this->name = $name;
+        $this->description = $description;
+        $this->difficulty = $difficulty;
+        $this->ingredients = new ArrayCollection();
+    }
+
+    public function addIngredient(Ingredient $ingredient)
+    {
+        $this->ingredients[] = $ingredient;
+    }
+}
+```
+
+También añadiremos constructores al resto de entidades.
+
+```
+class Author
+{
+    // ...
+
+    public function __construct($name, $surname)
+    {
+        $this->name = $name;
+        $this->surname = $surname;
+    }
+
+}
+```
+
+```
+class Ingredient
+{
+    // ...
+
+    public function __construct($name)
+    {
+        $this->name = $name;
+    }
+
+}
+```
+
+
+Podemos crear una completa receta con el siguiente controlador:
+
+```
+    public function createAction()
+    {
+        $em = $this->getDoctrine()->getEntityManager();
+        $author = new Author('Karlos', 'Arguiñano');
+        $em->persist($author);
+        $ingredient = new Ingredient('Pollo');
+        $em->persist($ingredient);
+        $recipe = new Recipe($author, 'Pollo al pil-pil', 'Deliciosa y económica receta.', 'fácil');
+        $recipe->add($ingredient);
+        $em->persist($recipe);
+        $em->flush();
+        return $this->redirect($this->generateUrl('my_recipes_show', array('id' => $recipe->getId())));
+    }
+```
+
+Con un par de rutas, una sencilla plantilla y unos pocos métodos obtenemos el siguiente resultado:
+
+![Una receta recién publicada](recipe_show.png "Una receta recién publicada")
+
 
 ## Operaciones en cascada
+
+
+## Relaciones unidireccionales y bidireccionales
+
 
 ## Lazy y greedy
 
