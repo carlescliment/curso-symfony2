@@ -194,7 +194,7 @@ class Recipe
         $this->ingredients = new ArrayCollection();
     }
 
-    public function addIngredient(Ingredient $ingredient)
+    public function add(Ingredient $ingredient)
     {
         $this->ingredients[] = $ingredient;
     }
@@ -237,14 +237,20 @@ Podemos crear una completa receta con el siguiente controlador:
     public function createAction()
     {
         $em = $this->getDoctrine()->getEntityManager();
+
         $author = new Author('Karlos', 'Arguiñano');
         $em->persist($author);
+
         $ingredient = new Ingredient('Pollo');
         $em->persist($ingredient);
+
         $recipe = new Recipe($author, 'Pollo al pil-pil', 'Deliciosa y económica receta.', 'fácil');
-        $recipe->add($ingredient);
         $em->persist($recipe);
+
+        $recipe->add($ingredient);
+
         $em->flush();
+
         return $this->redirect($this->generateUrl('my_recipes_show', array('id' => $recipe->getId())));
     }
 ```
@@ -255,6 +261,78 @@ Con un par de rutas, una sencilla plantilla y unos pocos métodos obtenemos el s
 
 
 ## Operaciones en cascada
+
+Aunque hemos conseguido construir una receta con autor e ingredientes, el código de `createAction()` no parece muy elegante. El mayor problema está en que debemos persistir las entidades hoja (`$author`, `$ingredient`) antes de persistir la entidad padre (`$recipe`). Esto es así porque, a priori, Doctrine no sabe qué hacer con las entidades relacionadas que no han sido persistidas. Si eliminásemos los persist de `$author` e `$ingredient` obtendríamos el siguiente resultado.
+
+![Error de almacenamiento en casacada](cascade_persist_exception.png "Error de almacenamiento en cascada")
+
+El mensaje nos sugiere dos soluciones; volver a la solución anterior de invocar explícitamente el método persist o configurar la asociación con la operación en casacada. Optaremos por la segunda opción, modificando el archivo de mapeo de la entida `Recipe`:
+
+```
+My\RecipesBundle\Entity\Recipe:
+    type: entity
+    table: recipes
+    manyToOne:
+        author:
+            # ...
+            cascade: ["persist"]
+    manyToMany:
+        ingredients:
+            # ...
+            cascade: ["persist"]
+    # ...
+```
+
+De este modo podremos limpiar el controlador de esos incómodos `persist()`.
+
+```
+    public function createAction()
+    {
+        $author = new Author('Karlos', 'Arguiñano');
+        $ingredient = new Ingredient('Pollo');
+        $recipe = new Recipe($author, 'Pollo al pil-pil', 'Deliciosa y económica receta.', 'fácil');
+        $recipe->add($ingredient);
+
+        $this->persistAndFlush($recipe);
+
+        return $this->redirect($this->generateUrl('my_recipes_show', array('id' => $recipe->getId())));
+    }
+
+    private function persistAndFlush(Recipe $recipe)
+    {
+        $em = $this->getDoctrine()->getEntityManager();
+        $em->persist($recipe);
+        $em->flush();
+    }
+```
+
+Doctrine facilita cuatro operaciones en cascada:
+- *persist*: Guardar entidades asociadas.
+- *remove*: Eliminar entidades asociadas.
+- *merge*: Combina entidades asociadas.
+- *detach*: Desvincula las entidades de sus equivalentes en la base de datos.
+
+La opción `all` configura todas ellas a la vez.
+
+Es importante destacar que estas operaciones se efectúan a nivel lógico, en memoria, y no en la base de datos. Para configurar el borrado en cascada a nivel de base de datos deberemos añadir la cláusula correspondiente en el mapeado de la entidad.
+
+```
+My\RecipesBundle\Entity\Recipe:
+    # ...
+    manyToOne:
+        author:
+            joinColumn:
+                onDelete: "CASCADE"
+                # ...
+```
+
+```
+$ php app/console doctrine:schema:update --dump-sql
+ALTER TABLE recipes DROP FOREIGN KEY FK_A369E2B5F675F31B;
+ALTER TABLE recipes ADD CONSTRAINT FK_A369E2B5F675F31B FOREIGN KEY (author_id) REFERENCES authors (id) ON DELETE CASCADE
+```
+
+
 
 
 ## Relaciones unidireccionales y bidireccionales
