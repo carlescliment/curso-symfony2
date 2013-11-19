@@ -333,10 +333,77 @@ ALTER TABLE recipes ADD CONSTRAINT FK_A369E2B5F675F31B FOREIGN KEY (author_id) R
 ```
 
 
-
-
 ## Relaciones unidireccionales y bidireccionales
 
+Los ejemplos mostrados anteriormente pertenecen a las denominadas _relaciones unidireccionales_. Significa que la relación es visible únicamente desde una parte. En este caso, podemos consultar el autor de una receta, pero no podemos recuperar las recetas de un autor sin un poco de trabajo extra.
 
-## Lazy y greedy
+```
+// Recuperar el autor de una receta
+$repository = $this->getDoctrine()->getRepository('MyRecipesBundle:Recipe');
+$recipe = $repository->find($id);
+$author = $recipe->getAuthor();
+
+
+// No es posible realizar el camino inverso
+$repository = $this->getDoctrine()->getRepository('MyRecipesBundle:Author');
+$author = $repository->find($id);
+$recipes = $author->getRecipes();
+```
+
+Vamos a transformar la relación en bidireccional para hacer el código anterior posible.
+
+En primer lugar modificaremos la clase `Author` para que contenga una referencia a sus recetas.
+
+```
+class Author
+{
+    // ...
+    protected $recipes;
+
+    public function __construct($name, $surname)
+    {
+        //...
+        $this->recipes = new ArrayCollection;
+    }
+
+    public function getRecipes()
+    {
+        return $this->recipes;
+    }
+}
+```
+
+Y modificaremos los archivos de mapeo de Doctrine:
+
+```
+My\RecipesBundle\Entity\Author:
+    oneToMany:
+        recipes:
+          targetEntity: Recipe
+          mappedBy: author
+
+My\RecipesBundle\Entity\Recipe:
+    manyToOne:
+        author:
+            inversedBy: recipes
+            // ...
+```
+
+Estos cambios no requieren modificaciones en la base de datos, ya que se llevan a cabo a nivel lógico.
+
+
+## Compendio de relaciones
+
+Doctrine ofrece un amplio abanico de relaciones además de las vistas hasta ahora. Todas ellas están descritas en la [documentación oficial](http://docs.doctrine-project.org/en/latest/reference/association-mapping.html).
+
+- [Many To One, Unidirectional](http://docs.doctrine-project.org/en/latest/reference/association-mapping.html#many-to-one-unidirectional)
+- [One To One, Unidirectional](http://docs.doctrine-project.org/en/latest/reference/association-mapping.html#one-to-one-unidirectional)
+- [One To One, Bidirectional](http://docs.doctrine-project.org/en/latest/reference/association-mapping.html#one-to-one-bidirectional)
+- [One To One, Self-referencing](http://docs.doctrine-project.org/en/latest/reference/association-mapping.html#one-to-one-self-referencing)
+- [One To Many, Bidirectional](http://docs.doctrine-project.org/en/latest/reference/association-mapping.html#one-to-many-bidirectional)
+- [One To Many, Unidirectional with join table](http://docs.doctrine-project.org/en/latest/reference/association-mapping.html#one-to-many-unidirectional-with-join-table)
+- [One To Many, Self-referencing](http://docs.doctrine-project.org/en/latest/reference/association-mapping.html#one-to-many-self-referencing)
+- [Many To Many, Unidirectional](http://docs.doctrine-project.org/en/latest/reference/association-mapping.html#many-to-many-unidirectional)
+- [Many To Many, Bidirectional](http://docs.doctrine-project.org/en/latest/reference/association-mapping.html#many-to-many-bidirectional)
+- [Many To Many, Self-referencing](http://docs.doctrine-project.org/en/latest/reference/association-mapping.html#many-to-many-self-referencing)
 
