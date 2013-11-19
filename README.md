@@ -6,6 +6,7 @@
   1. [¿Qué es Symfony?](/1-introduccion/que-es-symfony.md)
   1. [Instalación](/1-introduccion/instalacion.md)
   1. [Organización de directorios](/1-introduccion/directorios.md)
+  1. [Bundles](/1-introduccion/bundles.md)
   1. [Gestión de dependencias con composer](/1-introduccion/composer.md)
   1. [El profiler y la consola](/1-introduccion/profiler-y-consola.md)
 
