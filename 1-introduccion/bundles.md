@@ -1,6 +1,6 @@
 # Bundles
 
-En Symfony2, un bundle es un conjunto de archivos y directorios cuyo objetivo es proporcionar funcionalidad al sistema. Entre estos archivos podemos encontrar modelos, entidades, archivos de configuración, javascripts y hojas de estilo.
+En Symfony2, un bundle es un conjunto de archivos y directorios cuyo objetivo es proporcionar funcionalidad al sistema. Entre estos archivos podemos encontrar modelos, entidades, archivos de configuración, plantillas, javascripts y hojas de estilo, entre otros.
 
 ## Generación automática de bundles
 
@@ -21,17 +21,17 @@ El comando habrá realizado las siguientes acciones:
 
 - Actualizar `app/config/routing.yml` añadiendo las rutas del bundle al sistema de enrutado.
 ```
-my_recipes:
-    resource: "@MyRecipesBundle/Resources/config/routing.yml"
-    prefix:   /
+    my_recipes:
+        resource: "@MyRecipesBundle/Resources/config/routing.yml"
+        prefix:   /
 ```
 
 - Activar el nuevo bundle en `app/AppKernel.php`
 ```
-$bundles = array(
-    //...
-    new My\RecipesBundle\MyRecipesBundle(),
-);
+    $bundles = array(
+        //...
+        new My\RecipesBundle\MyRecipesBundle(),
+    );
 ```
 
 
