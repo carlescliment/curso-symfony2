@@ -38,7 +38,7 @@ My\RecipesBundle\Entity\Recipe:
         name:
             type: string
             length: 255
-        name:
+        difficulty:
             type: string
             length: 40
         description:

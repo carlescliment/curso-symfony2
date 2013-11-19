@@ -22,10 +22,10 @@
   3. [¿Qué es Doctrine?](/3-doctrine/doctrine.md)
   3. [Configuración](/3-doctrine/configuracion.md)
   3. [Definición y manipulación de entidades](/3-doctrine/entidades.md)
-  3. Definición de relaciones
+  3. [Definición de relaciones](/3-doctrine/relaciones.md)
   3. Lazy y greedy
-  3. Repositorios
   3. DQL
+  3. Repositorios
   3. Optimización de consultas
 
 4. Representando la vista
