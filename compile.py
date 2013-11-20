@@ -16,6 +16,14 @@ themes = { "1-introduccion" :
                  "controller",
                  "templating",
                  "model"],
+           "3-doctrine" :
+                ["doctrine",
+                 "configuracion",
+                 "entidades",
+                 "relaciones",
+                 "lazy-eager",
+                 "dql",
+                 "repositorios"],
          }
 
 def convert(theme, files):
