@@ -5,7 +5,7 @@ Symfony proporciona algunos métodos para realizar operaciones básicas sobre en
 DQL es similar a SQL en su sintaxis, pero se centra en las clases que representan a las entidades, y no en las tablas subyacentes.
 
 
-## Crear consultas con DQL.
+## Crear consultas con DQL
 
 El Entity Manager de Doctrine proporciona un acceso a DQL a través del método `createQuery()`.
 
