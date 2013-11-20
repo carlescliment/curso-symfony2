@@ -62,7 +62,6 @@ $query = $em->createQuery(
 En DQL también es posible recuperar valores escalares en lugar de objetos.
 
 ```
-$em = $this->getDoctrine()->getManager();
 $query = $em->createQuery(
     'SELECT MAX(a.id)
     FROM MyRecipesBundle:Author a'
@@ -75,7 +74,6 @@ $last_id = $query->getSingleScalarResult();
 Podemos optimizar las consultas facilitando información al `hydrator`, que se encarga de construir los objetos cargados.
 
 ```
-$em = $this->getDoctrine()->getManager();
 $query = $em->createQuery(
     'SELECT r, a, i
     FROM MyRecipesBundle:Recipes r
@@ -85,13 +83,12 @@ $query = $em->createQuery(
 $full_built_recipes = $query->getResult();
 ```
 
-Obsérvese la cláusula SELECT de la consulta anterior, que contiene `r, a, i`. De este modo, Doctrine cargará todos los objetos `Ingredient` y `Author` en `Recipe`. Si bien supone mayor consumo de memoria, permite optimizar enormemente la cantidad de consultas realizadas a la base de datos.
+Obsérvese la cláusula SELECT de la consulta anterior, que contiene `r, a, i`. De este modo, Doctrine cargará todos los objetos `Ingredient` y `Author` en `Recipe` en el menor número de consultas posible. Si bien supone mayor consumo de memoria, permite optimizar enormemente las transferencias con la base de datos.
 
 
-Otra forma de optimizar consultas es utilizar arrays en lugar de entidades completas.
+Otra forma de optimizar recursos es utilizar arrays en lugar de entidades completas.
 
 ```
-$em = $this->getDoctrine()->getManager();
 $query = $em->createQuery(
     'SELECT i.id, i.name
     FROM MyRecipesBundle:Ingredient i'
