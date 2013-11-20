@@ -1,4 +1,4 @@
-# Definición y manipulación de entidades
+# Entidades
 
 
 ## Definir entidades

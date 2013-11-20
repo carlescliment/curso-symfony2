@@ -6,6 +6,7 @@ themes = { "1-introduccion" :
                  "que-es-symfony",
                  "instalacion",
                  "directorios",
+                 "bundles",
                  "composer",
                  "profiler-y-consola"],
            "2-symfony-a-vista-de-pajaro" :
