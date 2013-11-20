@@ -27,8 +27,9 @@
   3. [Doctrine Query Language](/3-doctrine/dql.md)
   3. [Repositorios](/3-doctrine/repositorios.md)
 
-4. Representando la vista
-  4. Principios básicos de twig.
+4. El motor de plantillas Twig
+  4. [¿Qué es Twig?](/4-twig/twig.md)
+  4. Principios básicos de twig
   4. Herencia
   4. Vistas parciales
   4. Subrequests
