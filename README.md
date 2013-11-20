@@ -24,9 +24,8 @@
   3. [Entidades](/3-doctrine/entidades.md)
   3. [Relaciones](/3-doctrine/relaciones.md)
   3. [Lazy y eager](/3-doctrine/lazy-eager.md)
-  3. DQL
+  3. [Doctrine Query Language](/3-doctrine/dql.md)
   3. Repositorios
-  3. Optimización de consultas
 
 4. Representando la vista
   4. Principios básicos de twig.
