@@ -1,7 +1,7 @@
 # Indice
 
 1. Introducción
-  1. [La evolución de PHP y los frameworks MVC](//1-introduccion/la-evolucion-de-php-y-los-frameworks-mvc.md)
+  1. [La evolución de PHP y los frameworks MVC](/1-introduccion/la-evolucion-de-php-y-los-frameworks-mvc.md)
   1. [Ventajas e inconvenientes de los frameworks](/1-introduccion/ventajas-e-inconvenientes-de-los-frameworks.md)
   1. [¿Qué es Symfony?](/1-introduccion/que-es-symfony.md)
   1. [Instalación](/1-introduccion/instalacion.md)
