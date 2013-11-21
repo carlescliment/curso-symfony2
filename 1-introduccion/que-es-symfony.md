@@ -20,7 +20,7 @@ Es decir, hay varias maneras de utilizar Symfony en los proyectos PHP. La más o
 ## HTTP Framework
 A menudo, Symfony 2 es definido como un **framework MVC**. El [patrón MVC](es.wikipedia.org/wiki/Modelo_Vista_Controlador) consiste en separar en capas distintas los componentes encargados de manejar la vista, el modelo y el controlador.
 
-![Arquitectura MVC](http://upload.wikimedia.org/wikipedia/commons/a/a9/ModelViewControllerDiagram_es.svg "Arquitectura MVC")
+![Arquitectura MVC](mvc.png "Arquitectura MVC")
 
 Aunque Symfony 2 comparte algunos de los conceptos del patrón MVC (separación por capas), su objetivo es otro; atender peticiones HTTP de una manera organizada y eficaz. Por ello, Symfony 2 se define como un **framework HTTP**.
 
