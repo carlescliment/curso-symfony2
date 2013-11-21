@@ -58,11 +58,11 @@ Imaginemos que queremos mostrar las últimas recetas publicadas en un bloque inf
 </html>
 ```
 
-El problema que encontramos es que cualquier vista necesitará la variable `last_recipes`.
+Con esta construcción será necesario proporcionar la variable `last_recipes` a cualquier plantilla que extienda el layout.
 
 
 ```php
-<!-- src/My/RecipesBundle/Controller/DefaultController.php -->
+// src/My/RecipesBundle/Controller/DefaultController.php
 class DefaultController extends Controller
 {
 
@@ -102,7 +102,7 @@ class DefaultController extends Controller
 
 En cada acción que añadamos tendremos que recordar añadir las últimas recetas. A medida que añadamos nuevos bloques en la aplicación la situación puede volverse más y más inmanejable. Para corregir esta situación utilizaremos un controlador _embebido_.
 
-En primer lugar, cambiaremos el layout.
+En primer lugar, cambiaremos el layout sustituyendo el bloque por una instrucción `render()`.
 
 ```html
 <!-- app/Resources/views/base.html.twig -->
@@ -122,6 +122,19 @@ En primer lugar, cambiaremos el layout.
 ```
 
 Escribiremos la acción `lastRecipesAction` en el controlador `Default`.
+```php
+    /**
+     * @Template()
+     */
+    public function lastRecipesAction()
+    {
+        $date = new \DateTime('-10 days');
+        $repository = $this->getDoctrine()->getRepository('MyRecipesBundle:Recipe');
+        $recipes = $repository->findPublishedAfter($date);;
+        return array('recipes' => $recipes);
+    }
+```
+
 
 Y moveremos el código HTML a la plantilla correspondiente.
 
