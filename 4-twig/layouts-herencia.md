@@ -1,6 +1,6 @@
 # Layouts y herencia
 
-Todas las aplicaciones web disponen de al menos un layout. El layout define la estructura fundamental de la web, los estilos, bloques, menús y otros elementos que serán compartidos por las distintas URLs de la aplicación. En Twig, las plantillas pueden compartir un mismo layout a través de la herencia. La herencia en twig no se limita a un nivel, y es bastante común utilizar hasta tres niveles de herencia.
+Todas las aplicaciones web disponen de al menos un layout. El layout define la estructura fundamental de la web, los estilos, bloques, menús y otros elementos que serán compartidos por las distintas vistas de la aplicación. En Twig, las plantillas pueden compartir un mismo layout a través de la herencia. La herencia en twig no se limita a un nivel, y es bastante común utilizar hasta tres niveles de herencia.
 
 ![Herencia de tres niveles](twig-inheritance.png "Herencia de tres niveles")
 
@@ -10,6 +10,7 @@ Los layouts de las aplicaciones Symfony se almacenan en `app/Resources/views`. S
 
 
 ```html
+<!-- app/Resources/views/base.html.twig -->
 <!DOCTYPE html>
 <html>
     <head>

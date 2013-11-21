@@ -31,8 +31,7 @@
   4. [¿Qué es Twig?](/4-twig/twig.md)
   4. [Conceptos básicos](/4-twig/conceptos-basicos.md)
   4. [Layouts y herencia](/4-twig/layouts-herencia.md)
-  4. Include
-  4. Render
+  4. [Vistas parciales](/4-twig/include-render.md)
   4. Generación de assets
   4. Extensiones
 
