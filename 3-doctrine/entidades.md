@@ -3,7 +3,7 @@
 
 ## Definir entidades
 
-Las entidades en Doctrine son aquellos actores del sistema que necesitan ser persistidos. Para crear una entidad, en primer lugar empezaremos por escribir una clase en el directorio `entities` de nuestro bundle.
+Las entidades en Doctrine son aquellos actores del sistema que necesitan ser persistidos. Para crear una entidad, en primer lugar empezaremos por escribir una clase en el directorio `Entity` de nuestro bundle.
 
 ```Recipe.php
 // src/My/RecipesBundle/Entity/Recipe.php
@@ -159,7 +159,7 @@ $this->getDoctrine()->getManager()->flush();
 
 
 ## Eliminar entidades
-El borrado de entidades se realiza mediante el método `remove()` del `EntityManger`.
+El borrado de entidades se realiza mediante el método `remove()` del `EntityManager`.
 
 ```
 $recipe = $repository->find($id);
