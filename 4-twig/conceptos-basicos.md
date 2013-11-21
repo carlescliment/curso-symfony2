@@ -9,7 +9,7 @@ Twig proporciona tres tipos de marcas:
 | {{ ... }} | {{ recipe.name }}                        | Mostrar contenido                    |
 | {% ... %} | {% if expression %} ... {% endif %}      | Estructuras de control, evaluaciones |
 | {# ... #} | {# Some comment here #}                  | Inserta un comentario HTML           |
-| var&#124;filter| {{ recipe.created|date }}           | Aplica un filtro a la variable       |
+| var&#124;filter| {{ recipe.created&#124;date }}      | Aplica un filtro a la variable       |
 
 
 ## Renderizado
@@ -30,7 +30,7 @@ El HTML en consecuencia sería:
 Cualquier usuario que accediese a esa página ejecutaría un código JavaScript indeseado. ¡Las consecuencias podrían ser gravísimas!.
 
 Afortunadamente, en Twig, todas las variables que mostremos a través de `{{ ... }}` serán escapadas automáticamente.
-```php
+```html
 <h1>&lt;script&gt;alert(&#39;You have been hacked&#39;)&lt;/script&gt;</h1>
 <!-- The rest of the template here -->
 ```
