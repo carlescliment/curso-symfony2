@@ -105,12 +105,30 @@ El tag `{% spaceless %}` eliminará los espacios en blanco, ofreciendo documento
 
 El tag `verbatim` permite que el texto que el texto en su interior se muestre tal cual en el cliente. Útil cuando queremos representar código.
 
+```html
 {% verbatim %}
     <div>Esto se mostrará tal cual, con los tags HTML visbiles.</div>
 {% endverbatim %}
+```
 
 Twig ofrece una amplia variedad de tags documentada en [la web oficial](http://twig.sensiolabs.org/doc/tags/index.html).
 
 
 
 ## Filtros
+Los filtros son funciones aplicamos sobre el contenido. Existe una [larga lista de filtros](http://twig.sensiolabs.org/doc/filters/index.html) proporcionados por Twig, a la que podemos añadir nuestros propios filtros mediante extensiones.
+
+El elemento sobre el que apliquemos el filtro será tomado como input, y a partir de él se devolverá un output. Este output será el que finalmente se muestre en pantalla. Por ejemplo, el filtro `upper` convierte un texto a mayúsculas.
+
+```html
+<h1>{{ recipe.name|upper }}</h1>
+
+<h1>POLLO AL PIL-PIL</h1>
+```
+
+## Caché
+
+La primera vez que se renderiza una plantilla se genera un código equivalente en PHP. A este proceso se le denomina _compilado_. Las plantillas compiladas se almacenan por defecto en el directorio `app/cache/{environment}/twig`, donde `{environment}` es el nombre del entorno.
+
+Para que los efectos se manifiesten cuando modifiquemos una plantilla, deberemos limpiar la caché. Esto no ocurre en los entornos de `test` y `dev`, donde la caché está desactivada.
+
