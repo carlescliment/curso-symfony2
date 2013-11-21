@@ -6,10 +6,10 @@ Twig proporciona tres tipos de marcas:
 
 | Marca     | Ejemplo                                  | Propósito                            |
 |-----------|------------------------------------------|--------------------------------------|
-| {{ ... }} | {{ recipe.name }}                        | Muestra contenido                    |
-| {% ... %} | {% if expression %} ... {% endif %}      | Estructuras de control, evaluaciones |
-| {# ... #} | {# Some comment here #}                  | Inserta un comentario HTML           |
-| var&#124;filter| {{ recipe.created&#124;date }}      | Aplica un filtro a la variable       |
+| `{{ ... }}` | `{{ recipe.name }}`                        | Muestra contenido                    |
+| `{% ... %}` | `{% if expression %} ... {% endif %}`      | Estructuras de control, evaluaciones |
+| `{# ... #}` | `{# Some comment here #}`                  | Inserta un comentario HTML           |
+| `var&#124;filter` | `{{ recipe.created&#124;date }}`      | Aplica un filtro a la variable       |
 
 
 ## Renderizado
