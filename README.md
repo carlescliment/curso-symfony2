@@ -32,7 +32,7 @@
   4. [Conceptos básicos](/4-twig/conceptos-basicos.md)
   4. [Layouts y herencia](/4-twig/layouts-herencia.md)
   4. [Vistas parciales](/4-twig/include-render.md)
-  4. Generación de assets
+  4. [Generación de assets](/4-twig/assets.md)
   4. Extensiones
 
 5. Formularios y validaciones

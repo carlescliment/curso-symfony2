@@ -60,4 +60,11 @@ El tag `extends` debe ocupar siempre la primera línea de una plantilla hija. La
 
 El orden en el que se definan los bloques sobreescritos no es importante. En este caso, la plantilla ha sobreescrito los bloques `title` y `body`, pero ha dejado los bloques `stylesheets` y `javascripts` intactos.
 
+Es posible añadir información a un bloque sin sobreescribir completamente su contenido. Para ello podemos usar la función `parent()`.
 
+```html
+{% block mibloque %}
+  {{ parent() }}
+  <p>Contenido a añadir</p>
+{% endblock %}
+```
