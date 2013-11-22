@@ -65,6 +65,16 @@ Podremos recorrer arrays y colecciones con el tag `for`.
 </ul>
 ```
 
+En los bucles podemos recuperar el número de la iteración con `loop.index` y `loop.index0`:
+
+```twig
+{% for recipe in author.recipes %}
+  <li class="recipe {% if loop.index0 is odd %}odd{% else %}even{% endif %}">{{ recipe.name }}</li>
+{% endfor %}
+```
+
+
+
 ### Macros
 Las macros equivales a funciones de un lenguaje de programación. Permite reusar componentes en varias plantillas.
 
@@ -125,6 +135,19 @@ El elemento sobre el que apliquemos el filtro será tomado como input, y a parti
 
 <h1>POLLO AL PIL-PIL</h1>
 ```
+
+## Funciones
+
+En Twig pueden añadirse funciones que extiendan las capacidades de nuestras plantillas. Symfony añade algunas funciones al motor, como las relativas a la [gestión de formularios](http://symfony.com/doc/current/reference/forms/twig_reference.html#reference-form-twig-functions) o a la creación dinámica de enlaces. Para la generación de enlaces disponemos de las funciones `url` y `path`. Mientras que la primera genera una url completa, la segunda sólo añade una URI relativa.
+
+```html
+<a href="{{ url('recipes_show', { id: recipe.id }) }}">Ver</a>
+<a href="http://misrecetas.com/recipes/55">Ver</a>
+
+<a href="{{ path('recipes_show', { id: recipe.id }) }}">Ver</a>
+<a href="/recipes/55">Ver</a>
+```
+
 
 ## Caché
 
