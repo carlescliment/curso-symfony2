@@ -24,10 +24,18 @@ themes = { "1-introduccion" :
                  "lazy-eager",
                  "dql",
                  "repositorios"],
+           "4-twig" :
+                ["twig",
+                 "conceptos-basicos",
+                 "layouts-herencia",
+                 "include-render",
+                 "assets",
+                 "extensiones"],
          }
 
 def convert(theme, files):
     full_path_files = [full_path(theme, file) for file in files]
+    print "Compiling", theme
     execute_conversion("docx", theme, full_path_files);
 
 def full_path(theme, file):
