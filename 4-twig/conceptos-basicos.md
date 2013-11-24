@@ -37,6 +37,53 @@ Afortunadamente, en Twig, todas las variables que mostremos a través de `{{ ...
 
 Twig también proporciona atajos al acceder a objetos. En twig, las llamadas `recipe.name` y `recipe.getName()` son equivalentes. Cuando utilizamos la forma abreviada, twig buscará en el objeto `recipe` un atributo público `name`. Si no lo encuentra, buscará los métodos `name()`, `getName()` e `isName()`. Debido a que existe una compilación y guardado en caché esta funcionalidad no tiene impacto en el rendimiento.
 
+## Variables
+
+En una plantilla Twig podemos utilizar variables locales o globales.
+
+### Variables locales
+Las variables locales son aquellas que se han proporcionado a la plantilla a través del controlador:
+
+```
+$this->render('MyRecipesBundle:Default:show', array('recipe' => $recipe));
+```
+
+También son variables locales las definidas dentro de la propia plantilla:
+
+```
+{% set system_messages = ['error', 'warning', 'notice', 'success'] %}
+{% for type in system_messages %}
+  {{ ... }}
+{% endfor %}
+```
+
+### Variables globales
+
+Symfony define la variable global `app` que permite acceder a otras variables de la aplicación:
+
+- `app.security`: Contexto de seguridad.
+- `app.user`: Usuario actual.
+- `app.request`: Objeto request.
+- `app.session`: Objeto sesión.
+- `app.environment`: Entorno actual (dev, prod, test...).
+- `app.debug`: Modo debug (true, false).
+
+Podemos definir nuestras propias variables globales en twig modificando `config.yml`.
+
+```yaml
+# app/config/parameters.yml
+parameters:
+    ga_tracking: UA-xxxxx-x
+
+
+# app/config/config.yml
+twig:
+    globals:
+        ga_tracking: "%ga_tracking%"
+```
+
+Para una mayor información sobre la definición de variables globales, consultad el capítulo [Global Variables](http://symfony.com/doc/current/cookbook/templating/global_variables.html) de la documentación oficial.
+
 
 ## Tags
 
