@@ -33,7 +33,7 @@
   4. [Layouts y herencia](/4-twig/layouts-herencia.md)
   4. [Vistas parciales](/4-twig/include-render.md)
   4. [Generación de assets](/4-twig/assets.md)
-  4. Extensiones
+  4. [Extensiones](/4-twig/extensiones.md)
 
 5. Formularios y validaciones
   5. El componente de formularios de Symfony 2
