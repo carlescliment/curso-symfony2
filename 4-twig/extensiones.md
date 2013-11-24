@@ -84,8 +84,6 @@ Ya podemos utilizar el filtro `cssClass` de nuestra extensión y limpiar las pla
 </p>
 ```
 
-El código anterior asigna una clase CSS en función de la dificultad de la receta. Esta operación es bastante común y es posible que tengamos que repetirla en otras construcciones HTML, como elementos de un listado.
-
 ```html
 <ul>
     {% for recipe in recipes %}
