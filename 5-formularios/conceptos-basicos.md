@@ -91,14 +91,14 @@ use Symfony\Component\HttpFoundation\Request;
             ->add('save', 'submit')
             ->getForm();
 
-	      $form->handleRequest($request);
+        $form->handleRequest($request);
 
-	      if ($form->isValid()) {
-	          $em = $this->getDoctrine()->getManager();
-	          $em->persist($author);
-	          $em->flush();
-	          return $this->redirect($this->generateUrl('my_recipes_author_show', array('id' => $author->getId())));
-	      }
+        if ($form->isValid()) {
+            $em = $this->getDoctrine()->getManager();
+            $em->persist($author);
+            $em->flush();
+            return $this->redirect($this->generateUrl('my_recipes_author_show', array('id' => $author->getId())));
+        }
         return array('form' => $form->createView());
     }
 ```
@@ -166,13 +166,76 @@ use My\RecipesBundle\Form\Type\RecipeType;
 ```
 
 
+
+## Renderizado
+
+Previamente hemos visto cómo renderizar un formulario completo con la función `form`. Veamos ahora un modo más detallado de renderizar un formulario:
+
+```html
+{% extends '::base.html.twig' %}
+
+{% block title %}Create author{% endblock %}
+
+{% block body %}
+    {{ form_start(form, {'attr' : { 'id' : 'author-create'}}) }}
+    {{ form_errors(form) }}
+    {{ form_row(form.name) }}
+    {{ form_row(form.surname) }}
+    {{ form_row(form.save) }}
+    {{ form_end(form) }}
+{% endblock %}
+```
+
+- `form_start` introduce la cabecera `<form>` con los campos necesarios.
+- `form_errors` muestra los errores que aplican a todo el formulario.
+- `form_row` renderiza un campo concreto del formulario. Por defecto Symfony enmarca los campos en `<div>`, aunque como veremos más adelante este comportamiento es modificable.
+- `form_end` renderiza todos los campos que no hayan sido renderizados explícitamente y cierra la etiqueta `<form>`.
+
+Como vemos, en `form_start()` hemos pasado un diccionario con el atributo `id`. De este modo estamos indicando algunos atributos HTML que deseamos que se apliquen al formulario. De este modo podemos personalizar cada elemento del formulario.
+
+
+Una manera aún más detallada de renderizar el formulario es la siguiente:
+
+```html
+{% extends '::base.html.twig' %}
+
+{% block title %}Create author{% endblock %}
+
+{% block body %}
+    {{ form_start(form, {'attr' : { 'id' : 'author-create'}}) }}
+    {{ form_errors(form) }}
+    <ul>
+        <li>
+            {{ form_label(form.name) }}: 
+            {{ form_errors(form.name) }}
+            {{ form_widget(form.name) }}
+        </li>
+        <li>
+            {{ form_label(form.surname) }}: 
+            {{ form_errors(form.surname) }}
+            {{ form_widget(form.surname) }}
+        </li>
+        <li>
+            {{ form_widget(form.save) }}
+        </li>
+    </ul>
+    {{ form_end(form) }}
+{% endblock %}
+```
+
+- `form_label` genera automáticamente etiquetas para los campos proporcionados.
+- `form_errors`, cuando se proporciona un campo concreto, muestra los errores de validación que aplican a dicho campo.
+- `form_widget` genera el código mínimo para reproducir el campo en HTML.
+
+
+
 == BASICS ==
 - Formularios sencillos con createFormBuilder()
 - Form classes
 - Renderizado:
   - sencillo
   - item a item
-  - cambiar el método
+- cambiar el método
 - CSRF
 
 == VALIDATION ==
