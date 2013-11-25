@@ -42,7 +42,7 @@ class AuthorController extends Controller
     public function createAction()
     {
         $author = new Author;
-        $form = $this->createFormBuilder($name)
+        $form = $this->createFormBuilder($author)
             ->add('name', 'text')
             ->add('surname', 'text')
             ->add('save', 'submit')
@@ -52,8 +52,9 @@ class AuthorController extends Controller
 
 }
 ```
+El argumento que recibe el método `createFormBuilder` es el objeto `$author`. El método `add()` permite añadir elementos al formulario. El primer argumento del elemento identifica el campo en el objeto, mientras que el segundo especifica qué tipo de campo es. En Symfony debe haber una correspondencia entre el nombre del campo y el atributo o método del objeto. Esto es así porque el componente de formularios accede a los getters y setters del objeto durante el renderizado y manipulación del formulario.
 
-Y crearemos una plantilla.
+Para terminar crearemos una plantilla a la que le pasaremos una vista del formulario con `$form->createView()`.
 
 ```html
 {# src/My/RecipesBundle/Resources/views/Author/create.html.twig #}
@@ -69,6 +70,42 @@ Y crearemos una plantilla.
 Si accedemos a la ruta `/authors/create` podremos ver nuestro nuevo formulario.
 
 ![Formulario de Author](form.png "Formulario de Author")
+
+De momento este formulario no reacciona a los submits, por lo que vamos a añadir la lógica necesaria en el controlador.
+
+
+```php
+// src/My/RecipesBundle/Controller/AuthorController.php
+// ...
+
+
+use Symfony\Component\HttpFoundation\Request;
+// ...
+
+    public function createAction(Request $request)
+    {
+        $author = new Author;
+        $form = $this->createFormBuilder($name)
+            ->add('name', 'text')
+            ->add('surname', 'text')
+            ->add('save', 'submit')
+            ->getForm();
+
+	    $form->handleRequest($request);
+
+	    if ($form->isValid()) {
+	        $em = $this->getDoctrine()->getManager();
+	        $em->persist($author);
+	        $em->flush();
+	        return $this->redirect($this->generateUrl('my_recipes_author_show', array('id' => $author->getId())));
+	    }
+        return array('form' => $form->createView());
+    }
+```
+
+Cuando accedamos a `/authors/create`, el método `isValid()` de `$form` devolverá `false`. En `handleRequest()` hemos proporcionado al formulario el objeto `$request` por lo que el formulario sabe que estamos mostrando el formulario y no recibiendo información a través del mismo.
+
+Al hacer submit, los datos del objeto request serán cargados en la entidad Author en la llamada a `handleRequest()`. Internamente, Symfony invocará a los setters de `Author` y les pasará el contenido de `name` y `surname`. Posteriormente se ejecutará `isValid()` que efectuará las validaciones pertinentes y generará los mensajes de error necesarios. Si todo va bien y no hay errores de validación, se ejecutará el bloque del `if`, persistiendo la instancia y generando la redirección.
 
 
 == BASICS ==
