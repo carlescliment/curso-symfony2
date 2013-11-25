@@ -36,7 +36,7 @@
   4. [Extensiones](/4-twig/extensiones.md)
 
 5. Formularios y validaciones
-  5. El componente de formularios de Symfony 2
+  5. [Conceptos básicos](/5-formularios/conceptos-basicos.md)
   5. Validaciones
   5. Data transformers
   5. Form events
