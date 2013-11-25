@@ -91,14 +91,14 @@ use Symfony\Component\HttpFoundation\Request;
             ->add('save', 'submit')
             ->getForm();
 
-	    $form->handleRequest($request);
+	      $form->handleRequest($request);
 
-	    if ($form->isValid()) {
-	        $em = $this->getDoctrine()->getManager();
-	        $em->persist($author);
-	        $em->flush();
-	        return $this->redirect($this->generateUrl('my_recipes_author_show', array('id' => $author->getId())));
-	    }
+	      if ($form->isValid()) {
+	          $em = $this->getDoctrine()->getManager();
+	          $em->persist($author);
+	          $em->flush();
+	          return $this->redirect($this->generateUrl('my_recipes_author_show', array('id' => $author->getId())));
+	      }
         return array('form' => $form->createView());
     }
 ```
@@ -108,13 +108,71 @@ Cuando accedamos a `/authors/create`, el método `isValid()` de `$form` devolver
 Al hacer submit, los datos del objeto request serán cargados en la entidad Author en la llamada a `handleRequest()`. Internamente, Symfony invocará a los setters de `Author` y les pasará el contenido de `name` y `surname`. Posteriormente se ejecutará `isValid()` que efectuará las validaciones pertinentes y generará los mensajes de error necesarios. Si todo va bien y no hay errores de validación, se ejecutará el bloque del `if`, persistiendo la instancia y generando la redirección.
 
 
+
+## Form Classes
+
+Aunque los controladores de Symfony permiten crear formularios con `createFormBuilder()`, es una buena práctica llevar la lógica de estos formularios a una clase aparte para _adelgazar_ los controladores y favorecer la reusabilidad.
+
+Crearemos nuestra propia clase AuthorType.
+
+```php
+// src/My/RecipesBundle/Form/Type/RecipeType.php
+namespace My\RecipesBundle\Form\Type;
+
+use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\FormBuilderInterface;
+
+class RecipeType extends AbstractType
+{
+    public function buildForm(FormBuilderInterface $builder, array $options)
+    {
+        $builder
+            ->add('name', 'string')
+            ->add('surname', 'string')
+            ->add('save', 'submit');
+    }
+
+    public function getName()
+    {
+        return 'recipe';
+    }
+}
+```
+
+Ahora podemos reescribir la acción de nuestro controlador:
+
+```php
+// src/My/RecipesBundle/Controller/AuthorController.php
+// ...
+use My\RecipesBundle\Form\Type\RecipeType;
+
+
+    public function createAction(Request $request)
+    {
+        $author = new Author;
+        $form = $this->createForm(new RecipeType, $author);
+        $form->handleRequest($request);
+
+        if ($form->isValid()) {
+            $em = $this->getDoctrine()->getManager();
+            $em->persist($author);
+            $em->flush();
+            return $this->redirect($this->generateUrl('my_recipes_author_show', array('id' => $author->getId())));
+        }
+        return array('form' => $form->createView());
+    }
+
+
+```
+
+
 == BASICS ==
 - Formularios sencillos con createFormBuilder()
+- Form classes
 - Renderizado:
   - sencillo
   - item a item
   - cambiar el método
-- Form classes
 - CSRF
 
 == VALIDATION ==
