@@ -1,9 +1,9 @@
-# Form types
+# Field types
 
 Un formulario consiste en un conjunto de campos. Los _field types_ identifican los tipos de campo que tenemos a nuestra disposición. Además de los [field types proporcionados por Symfony](http://symfony.com/doc/current/reference/forms/types.html) podremos añadir nuestros propios tipos. En Symfony, además, un formulario puede ser definido como field type, flexibilizando enormemente la construcción de formularios complejos.
 
 
-## Field types
+# Field types en formularios
 
 Como hemos visto en anteriores capítulos, para añadir campos a un formulario utilizamos el método `add()`.
 

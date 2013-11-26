@@ -38,7 +38,7 @@
 5. Formularios y validaciones
   5. [Conceptos básicos](/5-formularios/conceptos-basicos.md)
   5. [Validación](/5-formularios/validacion.md)
-  5. [Form Types](/5-formularios/form-types.md)
+  5. [Field Types](/5-formularios/field-types.md)
   5. Data transformers
   5. Form events
 
