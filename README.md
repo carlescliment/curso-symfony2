@@ -37,7 +37,7 @@
 
 5. Formularios y validaciones
   5. [Conceptos básicos](/5-formularios/conceptos-basicos.md)
-  5. Validaciones
+  5. [Validación](/5-formularios/validacion.md)
   5. Data transformers
   5. Form events
 

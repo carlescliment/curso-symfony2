@@ -116,13 +116,13 @@ Aunque los controladores de Symfony permiten crear formularios con `createFormBu
 Crearemos nuestra propia clase AuthorType.
 
 ```php
-// src/My/RecipesBundle/Form/Type/RecipeType.php
+// src/My/RecipesBundle/Form/Type/AuthorType.php
 namespace My\RecipesBundle\Form\Type;
 
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 
-class RecipeType extends AbstractType
+class AuthorType extends AbstractType
 {
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
@@ -134,7 +134,7 @@ class RecipeType extends AbstractType
 
     public function getName()
     {
-        return 'recipe';
+        return 'author';
     }
 }
 ```
@@ -144,13 +144,13 @@ Ahora podemos reescribir la acción de nuestro controlador:
 ```php
 // src/My/RecipesBundle/Controller/AuthorController.php
 // ...
-use My\RecipesBundle\Form\Type\RecipeType;
+use My\RecipesBundle\Form\Type\AuthorType;
 
 
     public function createAction(Request $request)
     {
         $author = new Author;
-        $form = $this->createForm(new RecipeType, $author);
+        $form = $this->createForm(new AuthorType, $author);
         $form->handleRequest($request);
 
         if ($form->isValid()) {
@@ -229,41 +229,73 @@ Una manera aún más detallada de renderizar el formulario es la siguiente:
 
 
 
-== BASICS ==
-- Formularios sencillos con createFormBuilder()
-- Form classes
-- Renderizado:
-  - sencillo
-  - item a item
-- cambiar el método
-- CSRF
+## Personalizar la acción y método HTTP
 
-== VALIDATION ==
-- Validation
-  - the validator service
-  - validate entities and models
-  - validate forms
-    - constraints
-    - custom constraints
-    - validation groups
-    - validation groups and forms
-    - disabling validation
+Como hemos visto, la función `form_start(form)` genera el encabezado del método.
+```html
+<form id='author-create' action='' method='post'>
+```
 
-== TYPES == 
-- Field types
-	- field type guessing
-	- custom field types
-- Forms as services
+El método por defecto es `POST`, pero Symfony permite modificar el método de un formulario.
 
-== EMBED FORMS ==
-- Embed form
-	- form collections
+```php
+class AuthorType extends AbstractType
+{
+    public function buildForm(FormBuilderInterface $builder, array $options)
+    {
+        $builder
+            ->setMethod('PUT')
+            //...
+            ;
+    }
+}
+```
 
-== THEMING ==
-- Form theming
+Al renderizar ahora el formulario, veremos la siguiente cabecera:
+```html
+<form id='author-create' action='' method='post'><input type="hidden" name="_method" value="PUT" />
+```
+
+Aunque el componente de formularios no modifica el método en los casos `PUT`, `PATCH` y `DELETE`, añade un campo oculto `_method` que utilizará posteriormente para construir el objeto Request con el método seleccionado.
 
 
-== FORM EVENTS ==
+Podemos personalizar la acción y el método desde el controlador:
+
+```php
+$form = $this->createForm(new AuthorType(), $author, array(
+    'action' => $this->generateUrl('my_recipes_author_create'),
+    'method' => 'PUT',
+));
+```
+
+## Protección CSRF
+
+El componente de formularios de Symfony proporcionan automáticamente protección contra ataques CSRF [Cross-Site Request Forgery](http://en.wikipedia.org/wiki/Cross-site_request_forgery) generando un ID único en cada formulario. Aunque está activada por defecto, podemos desactivar la protección CSRF en la configuración de la aplicación:
+
+```yaml
+# app/config/config.yml
+framework:
+    csrf_protection: ~
+```
 
 
-== DATA TRANSFORMERS ==
+Adicionalmente podemos controlar la protección CSRF por formulario, incluso añadiendo semillas para ayudar a la generación de códigos únicos:
+
+```php
+use Symfony\Component\OptionsResolver\OptionsResolverInterface;
+
+
+class AuthorType extends AbstractType
+{
+    // ...
+    public function setDefaultOptions(OptionsResolverInterface $resolver)
+    {
+        $resolver->setDefaults(array(
+            'csrf_protection' => true,
+            'csrf_field_name' => '_token',
+            // a unique key to help generate the secret token
+            'intention'       => 'author_item',
+        ));
+    }
+}
+```
