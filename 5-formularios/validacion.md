@@ -2,7 +2,7 @@
 Aunque la documentación oficial sobre [validación de formularios](http://symfony.com/doc/current/book/forms.html#form-validation) proporciona una extensísima información, aquí resumiremos los puntos más importantes.
 
 
-## El servicio de validación
+## Constraints
 
 El servicio de validación de symfony permite validar cualquier clase a la que se haya sometido a reglas. Estas reglas reciben el nombre de **constraints**.
 
@@ -29,9 +29,6 @@ Una vez establecidas las constraints, desde cualquier controlador o clase con ac
 En el caso anterior estamos construyendo un objeto `Author` con el atributo `surname` vacío, por lo que `$validator>validate($author)` devolverá un array indicando el error encontrado. En caso contrario, devolverá un array vacío.
 
 Cuando invocamos el método `isValid()` de un formulario, internamente se está utilizando el servicio de validación para validar la clase subyacente. Además, el componente de formularios es capaz de interpretar el valor de retorno y contextualizarlo en el campo del formulario que corresponda.
-
-
-## Constraints
 
 Los constraints pueden aplicarse a atributos del objeto y a métodos. Los métodos proporcionan mayor potencia en la validación al introducir nuestra propia lógica. Por ejemplo, para vincular un constraint a un método `isValid()` deberemos añadir una sección `getters` al archivo de validación.
 
