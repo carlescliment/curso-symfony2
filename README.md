@@ -57,5 +57,7 @@
   8. Test Driven Development con Symfony 2
 
 9. Internacionalización
+  9. Ficheros de traducción
+  9. [Translate constraint messages](http://symfony.com/doc/current/book/translation.html#book-translation-constraint-messages)
 
 10. Apéndice: Cómo publicar tu propio bundle.
