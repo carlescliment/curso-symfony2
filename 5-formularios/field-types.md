@@ -138,20 +138,3 @@ A partir de entonces el desplegable estará disponible como cualquier otro field
         $builder
             ->add('difficulty', 'difficulty');
 ```
-
-
-
-== EMBED FORMS ==
-- Embed form
-	- form collections
-
-== THEMING ==
-- Form theming
-
-
-== FORM EVENTS ==
-
-
-== DATA TRANSFORMERS ==
-
-== Consultas a entidades => a repo ==
