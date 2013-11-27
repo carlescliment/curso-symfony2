@@ -40,8 +40,8 @@
   5. [Validación](/5-formularios/validacion.md)
   5. [Field Types](/5-formularios/field-types.md)
   5. [Formularios embebidos](/5-formularios/formularios-embebidos.md)
-  5. Data transformers
-  5. Form events
+  5. [Form events](/5-formularios/form-events.md)
+  5. [Data transformers](/5-formularios/data-transformers.md)
 
 6. Inyección de dependencias
   6. Qué es y para qué sirve la inyección de dependencias

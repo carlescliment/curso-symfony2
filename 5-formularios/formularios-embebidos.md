@@ -139,21 +139,11 @@ class RecipeType extends AbstractType
 }
 ```
 
+## Embeber colecciones de formulario
+
+Las colecciones de formularios permiten resolver las relaciones uno a muchos y muchos a muchos. Por ejemplo, en el formulario de recetas podríamos incluir una colección de formularios que permita añadir múltiples ingredientes.
+
+Las colecciones de formularios requieren de un poco de código en JavaScript, y merecen ser estudiadas en un capítulo aparte. Toda la información al respecto está disponible en el capítulo [How to Embed a Collection of Forms](http://symfony.com/doc/current/cookbook/form/form_collections.html) de la documentación oficial.
 
 
-
-== EMBED FORMS ==
-- Embed form
-	- form collections
-
-
-== FORM EVENTS ==
-
-
-== DATA TRANSFORMERS ==
-
-== Consultas a entidades => a repo ==
-
-== THEMING ==
-- Form theming
 
