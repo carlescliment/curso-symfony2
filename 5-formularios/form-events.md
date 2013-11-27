@@ -112,3 +112,4 @@ En la clase `Recipe` añadiremos el campo `notes` y actualizaremos la base de da
 ![Form events](receta-dificil.png "Form events")
 
 
+Para una información más extensa sobre eventos en formularios consultad el [capítulo correspondiente](http://symfony.com/doc/current/cookbook/form/dynamic_form_modification.html) en la documentación oficial.
