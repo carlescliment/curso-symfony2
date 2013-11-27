@@ -19,6 +19,7 @@ Twig reúne las siguientes características:
 Existen multitud de motores en el mercado para PHP y otros lenguajes. En el artículo de wikipedia [Comparison of web template engines](http://en.wikipedia.org/wiki/Comparison_of_web_template_engines) se describen los más representativos.
 
 Plantilla en PHP:
+
 ```php
 <ul id="navigation">
     <?php foreach ($navigation as $item): ?>
@@ -32,6 +33,7 @@ Plantilla en PHP:
 ```
 
 Plantilla en Twig:
+
 ```twig
 <ul id="navigation">
     {% for item in navigation %}
@@ -41,6 +43,7 @@ Plantilla en Twig:
 ```
 
 Plantilla en HAML:
+
 ```haml
 %ul#navigation
   - navigation.each do |item|

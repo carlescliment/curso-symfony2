@@ -63,3 +63,6 @@
   9. [Translate constraint messages](http://symfony.com/doc/current/book/translation.html#book-translation-constraint-messages)
 
 10. Apéndice: Cómo publicar tu propio bundle.
+  10. Composer, git y packagist
+  10. Configuración phpunit
+  10. Integración con travis

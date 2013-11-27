@@ -8,6 +8,7 @@ Es difícil imaginar una aplicación web sin formularios. El [componente de form
 Podemos crear formularios desde nuestros controladores con el método `createFormBuilder()`. Retomaremos nuestra aplicación de recetas proporcionando un formulario para crear autores.
 
 En primer lugar nos aseguraremos de que nuestra clase `Author` dispone de todos los métodos necesarios.
+
 ```bash
 $ app/console doctrine:generate:entities MyRecipesBundle:Author
 Generating entity "My\RecipesBundle\Entity\Author"
@@ -16,6 +17,7 @@ Generating entity "My\RecipesBundle\Entity\Author"
 ```
 
 Añadiremos la nueva ruta al formulario.
+
 ```yaml
 # src/My/RecipesBundle/Resources/config/routing.yml
 my_recipes_author_create:
@@ -24,6 +26,7 @@ my_recipes_author_create:
 ```
 
 Escribiremos la acción del controlador.
+
 ```php
 // src/My/RecipesBundle/Controller/AuthorController.php
 namespace My\RecipesBundle\Controller;
@@ -232,6 +235,7 @@ Una manera aún más detallada de renderizar el formulario es la siguiente:
 ## Personalizar la acción y método HTTP
 
 Como hemos visto, la función `form_start(form)` genera el encabezado del método.
+
 ```html
 <form id='author-create' action='' method='post'>
 ```
@@ -252,6 +256,7 @@ class AuthorType extends AbstractType
 ```
 
 Al renderizar ahora el formulario, veremos la siguiente cabecera:
+
 ```html
 <form id='author-create' action='' method='post'><input type="hidden" name="_method" value="PUT" />
 ```

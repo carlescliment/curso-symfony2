@@ -22,6 +22,7 @@ Una de las mayores ventajas de Twig es la seguridad que proporciona ante ataques
 ```
 
 El HTML en consecuencia sería:
+
 ```html
 <h1><script>alert('You have been hacked')</script></h1>
 <!-- The rest of the template here -->
