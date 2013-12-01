@@ -161,7 +161,7 @@ El tag `{% spaceless %}` eliminará los espacios en blanco, ofreciendo documento
 ```
 
 
-El tag `verbatim` permite que el texto que el texto en su interior se muestre tal cual en el cliente. Útil cuando queremos representar código.
+El tag `verbatim` permite que el texto en su interior se muestre tal cual en el cliente. Útil cuando queremos representar código.
 
 ```html
 {% verbatim %}
