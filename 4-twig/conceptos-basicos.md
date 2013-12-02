@@ -22,6 +22,7 @@ Una de las mayores ventajas de Twig es la seguridad que proporciona ante ataques
 ```
 
 El HTML en consecuencia sería:
+
 ```html
 <h1><script>alert('You have been hacked')</script></h1>
 <!-- The rest of the template here -->
@@ -160,7 +161,7 @@ El tag `{% spaceless %}` eliminará los espacios en blanco, ofreciendo documento
 ```
 
 
-El tag `verbatim` permite que el texto que el texto en su interior se muestre tal cual en el cliente. Útil cuando queremos representar código.
+El tag `verbatim` permite que el texto en su interior se muestre tal cual en el cliente. Útil cuando queremos representar código.
 
 ```html
 {% verbatim %}

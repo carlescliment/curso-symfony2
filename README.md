@@ -39,10 +39,11 @@
   4. [Extensiones](/4-twig/extensiones.md)
 
 5. Formularios y validaciones
-  5. El componente de formularios de Symfony 2
-  5. Validaciones
-  5. Data transformers
-  5. Form events
+  5. [Conceptos básicos](/5-formularios/conceptos-basicos.md)
+  5. [Validación](/5-formularios/validacion.md)
+  5. [Field Types](/5-formularios/field-types.md)
+  5. [Formularios embebidos](/5-formularios/formularios-embebidos.md)
+  5. [Form events](/5-formularios/form-events.md)
 
 6. Inyección de dependencias
   6. Qué es y para qué sirve la inyección de dependencias
@@ -60,5 +61,10 @@
   8. Test Driven Development con Symfony 2
 
 9. Internacionalización
+  9. Ficheros de traducción
+  9. [Translate constraint messages](http://symfony.com/doc/current/book/translation.html#book-translation-constraint-messages)
 
 10. Apéndice: Cómo publicar tu propio bundle.
+  10. Composer, git y packagist
+  10. Configuración phpunit
+  10. Integración con travis

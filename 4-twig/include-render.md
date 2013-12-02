@@ -122,6 +122,7 @@ En primer lugar, cambiaremos el layout sustituyendo el bloque por una instrucci√
 ```
 
 Escribiremos la acci√≥n `lastRecipesAction` en el controlador `Default`.
+
 ```php
     /**
      * @Template()

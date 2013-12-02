@@ -33,6 +33,12 @@ themes = { "1-introduccion" :
                  "include-render",
                  "assets",
                  "extensiones"],
+           "5-formularios" :
+                ["conceptos-basicos",
+                 "validacion",
+                 "field-types",
+                 "formularios-embebidos",
+                 "form-events"],
          }
 
 def convert(theme, files):
