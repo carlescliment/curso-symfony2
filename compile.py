@@ -8,14 +8,16 @@ themes = { "1-introduccion" :
                  "directorios",
                  "bundles",
                  "composer",
-                 "profiler-y-consola"],
+                 "profiler-y-consola",
+                 "ejercicios"],
            "2-symfony-a-vista-de-pajaro" :
                 ["fundamentos-http",
                  "request-response",
                  "routing",
                  "controller",
                  "templating",
-                 "model"],
+                 "model",
+                 "ejercicios"],
            "3-doctrine" :
                 ["doctrine",
                  "configuracion",

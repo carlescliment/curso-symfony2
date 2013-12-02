@@ -9,6 +9,7 @@
   1. [Bundles](/1-introduccion/bundles.md)
   1. [Gestión de dependencias con composer](/1-introduccion/composer.md)
   1. [El profiler y la consola](/1-introduccion/profiler-y-consola.md)
+  1. [Ejercicios](/1-introduccion/ejercicios.md)
 
 2. El Framework Symfony 2
   2. [Fundamentos HTTP](/2-symfony-a-vista-de-pajaro/fundamentos-http.md)
@@ -17,6 +18,7 @@
   2. [Controlador](/2-symfony-a-vista-de-pajaro/controller.md)
   2. [Vista](/2-symfony-a-vista-de-pajaro/templating.md)
   2. [Modelo](/2-symfony-a-vista-de-pajaro/model.md)
+  2. [Ejercicios](/2-symfony-a-vista-de-pajaro/ejercicios.md)
 
 3. Gestión de la persistencia con Doctrine
   3. [¿Qué es Doctrine?](/3-doctrine/doctrine.md)
@@ -26,6 +28,7 @@
   3. [Lazy y eager](/3-doctrine/lazy-eager.md)
   3. [Doctrine Query Language](/3-doctrine/dql.md)
   3. [Repositorios](/3-doctrine/repositorios.md)
+  3. [Ejercicios](/3-doctrine/ejercicios.md)
 
 4. El motor de plantillas Twig
   4. [¿Qué es Twig?](/4-twig/twig.md)
