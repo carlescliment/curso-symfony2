@@ -37,6 +37,7 @@
   4. [Vistas parciales](/4-twig/include-render.md)
   4. [Generación de assets](/4-twig/assets.md)
   4. [Extensiones](/4-twig/extensiones.md)
+  4. [Ejercicios](/4-twig/ejercicios.md)
 
 5. Formularios y validaciones
   5. [Conceptos básicos](/5-formularios/conceptos-basicos.md)
