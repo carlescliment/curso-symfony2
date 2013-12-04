@@ -25,7 +25,8 @@ themes = { "1-introduccion" :
                  "relaciones",
                  "lazy-eager",
                  "dql",
-                 "repositorios"],
+                 "repositorios",
+                 "ejercicios"],
            "4-twig" :
                 ["twig",
                  "conceptos-basicos",

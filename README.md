@@ -47,7 +47,7 @@
   5. [Form events](/5-formularios/form-events.md)
 
 6. Inyección de dependencias
-  6. Qué es y para qué sirve la inyección de dependencias
+  6. [Conceptos teóricos](/6-inyeccion/conceptos-teoricos.md)
   6. El componente de inyección de dependencias de Symfony 2
   6. Trabajando con distintos entornos
 
