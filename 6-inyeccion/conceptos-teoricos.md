@@ -69,7 +69,7 @@ function save_account($account_data, $save_callback) {
 ```
 class Account {
 
-    public method save(Database $db) {
+    public method save(DatabaseInterface $db) {
         $success = $db->insertRow('accounts', $this->toArray());
         if (!$success) {
             $message = sprintf('An error occurred saving the account for %s', $this->name);
