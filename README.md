@@ -52,8 +52,9 @@
   6. [Ejercicios](/6-inyeccion/ejercicios.md)
 
 7. Eventos
-  7. El Event Dispatcher
-  7. Organizando tu código con eventos (slim controller, slim model)
+  7. [Introducción](/7-eventos/introduccion.md)
+  7. El EventDispatcher Component
+  7. Ejercicios
 
 8. Testing con PHPUnit
   8. Testing funcional
