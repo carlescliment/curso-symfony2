@@ -21,7 +21,7 @@ class RecipeController extends Controller
 }
 ```
 
-La servicio encargado de crear la receta es el siguiente:
+El servicio encargado de crear la receta es el siguiente:
 
 ```
 // src/My/RecipesBundle/Model/RecipeCreator.php
