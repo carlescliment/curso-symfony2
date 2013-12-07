@@ -2,9 +2,6 @@
 
 Ya hemos visto principios que facilitan el desacoplamiento del código y la extensibilidad, como la inyección de dependencias y el uso de servicios. En este tema veremos cómo llevar aún más allá estos principios gracias al uso de eventos.
 
-
-## Acoplamiento temporal
-
 Volvamos a la aplicación de recetas, concretamente a la acción del controlador en la que se creaba una nueva receta:
 
 ```
