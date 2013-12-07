@@ -40,6 +40,10 @@ themes = { "1-introduccion" :
                  "field-types",
                  "formularios-embebidos",
                  "form-events"],
+           "6-inyeccion" :
+                ["conceptos-teoricos",
+                 "symfony2",
+                 "ejercicios"],
          }
 
 def convert(theme, files):

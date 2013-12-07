@@ -5,7 +5,6 @@
 
 De entre los tres paradigmas más conocidos, el funcional, el orientado a objetos y el procedural, seguramente sea este último es el más extendido y el que causa más problemas en cuanto a escalabilidad, portabilidad y _testabilidad_ del código. En una aplicación procedural típica, las funciones o procedimientos de más bajo nivel invocan a otras funciones o procedimientos del sistema.
 
-
 ```
 function save_account($account_data) {
     // ...

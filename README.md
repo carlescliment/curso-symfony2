@@ -48,8 +48,8 @@
 
 6. Inyección de dependencias
   6. [Conceptos teóricos](/6-inyeccion/conceptos-teoricos.md)
-  6. El componente de inyección de dependencias de Symfony 2
-  6. Trabajando con distintos entornos
+  6. [El componente de inyección de dependencias de Symfony 2](/6-inyeccion/symfony2.md)
+  6. [Ejercicios](/6-inyeccion/ejercicios.md)
 
 7. Eventos
   7. El Event Dispatcher
