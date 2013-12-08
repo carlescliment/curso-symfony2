@@ -44,6 +44,10 @@ themes = { "1-introduccion" :
                 ["conceptos-teoricos",
                  "symfony2",
                  "ejercicios"],
+           "7-eventos" :
+                ["introduccion",
+                 "event-dispatcher",
+                 "ejercicios"],
          }
 
 def convert(theme, files):

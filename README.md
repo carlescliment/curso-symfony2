@@ -53,20 +53,21 @@
 
 7. Eventos
   7. [Introducción](/7-eventos/introduccion.md)
-  7. El EventDispatcher Component
-  7. Ejercicios
+  7. [El EventDispatcher Component](/7-eventos/event-dispatcher.md)
+  7. [Ejercicios](/7-eventos/ejercicios.md)
 
-8. Testing con PHPUnit
-  8. Testing funcional
-  8. Testing unitario
-  8. Mocks, Stubs y Fake Objects
-  8. Test Driven Development con Symfony 2
+8. Internacionalización
+  8. Ficheros de traducción
+  8. [Translate constraint messages](http://symfony.com/doc/current/book/translation.html#book-translation-constraint-messages)
 
 9. Internacionalización
   9. Ficheros de traducción
   9. [Translate constraint messages](http://symfony.com/doc/current/book/translation.html#book-translation-constraint-messages)
 
-10. Apéndice: Cómo publicar tu propio bundle.
-  10. Composer, git y packagist
-  10. Configuración phpunit
-  10. Integración con travis
+10. Testing con PHPUnit
+  10. Testing funcional
+  10. Testing unitario
+  10. Mocks, Stubs y Fake Objects
+  10. Test Driven Development con Symfony 2
+
+

@@ -89,7 +89,7 @@ Ahora nuestro creador tiene tres responsabilidades:
 
 Aún así, dado que lo hemos encapsulado todo en otras clases, el código parece bastante sencillo, ¿verdad? En realidad hay varios aspectos en este diseño que son mejorables. En primer lugar hemos roto el llamado [Principio de una sola responsabilidad](https://docs.google.com/file/d/0ByOwmqah_nuGNHEtcU5OekdDMkk/edit) o SRP. Pero además también hemos introducido acoplamiento temporal.
 
-El acoplamiento temporal significa que dos o más acciones son llevadas a cabo por el mismo componente sólo porque ocurren en el mismo instante. 
+El acoplamiento temporal significa que dos o más acciones son llevadas a cabo por el mismo componente sólo porque ocurren en el mismo instante.
 
 Ya hemos visto principios que facilitan el desacoplamiento del código y la extensibilidad, como la inyección de dependencias y el uso de servicios. En este tema vamos a aprender a resolver el acoplamiento temporal con el uso de eventos.
 
