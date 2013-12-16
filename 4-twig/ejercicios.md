@@ -1,7 +1,7 @@
 # Ejercicios
 
 **Ejercicio 1:**
-Añade algunas vistas a tu aplicación. Puedes utilizar tu propio diseño o descargarte un framework CSS como Foundation, Twitter Bootstrap o HTML5 Boilerplate, entre otros.
+Añade algunas vistas a tu aplicación siguiendo los ejemplos expuestos en el tema. Puedes utilizar tu propio diseño o descargarte un framework CSS como Foundation, Twitter Bootstrap o HTML5 Boilerplate, entre otros.
 
 
 **Ejercicio 2:**
