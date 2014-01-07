@@ -45,6 +45,7 @@
   5. [Field Types](/5-formularios/field-types.md)
   5. [Formularios embebidos](/5-formularios/formularios-embebidos.md)
   5. [Form events](/5-formularios/form-events.md)
+  5. [Ejercicios](/5-formularios/ejercicios.md)
 
 6. Inyección de dependencias
   6. [Conceptos teóricos](/6-inyeccion/conceptos-teoricos.md)
@@ -56,9 +57,11 @@
   7. [El EventDispatcher Component](/7-eventos/event-dispatcher.md)
   7. [Ejercicios](/7-eventos/ejercicios.md)
 
-8. Internacionalización
-  8. Ficheros de traducción
-  8. [Translate constraint messages](http://symfony.com/doc/current/book/translation.html#book-translation-constraint-messages)
+8. Seguridad
+  8. [Conceptos básicos](/8-seguridad/conceptos-basicos.md)
+  8. [Usuarios y roles](/8-seguridad/usuarios.md)
+  8. [Conceptos avanzados](/8-seguridad/conceptos-avanzados.md)
+  8. [Ejercicios](/8-seguridad/ejercicios.md)
 
 9. Internacionalización
   9. Ficheros de traducción
