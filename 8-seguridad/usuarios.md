@@ -289,7 +289,7 @@ security:
 
     access_control:
         - { path: ^/secured, roles: ROLE_ADMIN }
-
+```
 
 
 Insertaremos un usuario de prueba en la base de datos para comprobar su funcionamiento:
