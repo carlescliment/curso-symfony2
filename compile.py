@@ -48,6 +48,10 @@ themes = { "1-introduccion" :
                 ["introduccion",
                  "event-dispatcher",
                  "ejercicios"],
+           "8-seguridad" :
+                ["conceptos-basicos",
+                 "usuarios",
+                 "ejercicios"],
          }
 
 def convert(theme, files):

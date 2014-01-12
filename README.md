@@ -60,7 +60,6 @@
 8. Seguridad
   8. [Conceptos básicos](/8-seguridad/conceptos-basicos.md)
   8. [Usuarios y roles](/8-seguridad/usuarios.md)
-  8. [Conceptos avanzados](/8-seguridad/conceptos-avanzados.md)
   8. [Ejercicios](/8-seguridad/ejercicios.md)
 
 9. Internacionalización
