@@ -33,4 +33,4 @@ Uno de las mayores transformaciones ha sido la aparición de diversos frameworks
 
 Fuente: [Comparison of web application frameworks, Wikipedia](http://en.wikipedia.org/wiki/Comparison_of_web_application_frameworks)
 
-De entre los freworks, podemos distinguir los monolíticos y los basados en componentes. Symfony 2 pertenece al segundo grupo.
+De entre los frameworks, podemos distinguir los monolíticos y los basados en componentes. Symfony 2 pertenece al segundo grupo.
