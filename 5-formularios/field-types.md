@@ -121,7 +121,7 @@ class RecipeType extends AbstractType
 
 
 ## Ofrecer field types como servicios
-El siguiente paso para ofrecer código extensible, reusable y mantenible es exponer nuestro `RecipeType` en la capa de servicios.
+El siguiente paso para ofrecer código extensible, reusable y mantenible es exponer nuestro `DifficultyType` en la capa de servicios.
 
 ```php
 # src/My/RecipesBundle/Resources/config/services.yml
